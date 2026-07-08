@@ -46,6 +46,14 @@
   font-display: swap;
 }
 
+/*Colors*/
+:root {
+  --yellow-main: #e3ef26;
+  --green-main: #075633;
+  --white-main: #ffffff;
+  --yellow-text: #bdca7a;
+}
+
 /* ── Base ── */
 @layer base {
   html {
@@ -60,6 +68,50 @@
   *::before,
   *::after {
     box-sizing: border-box;
+  }
+
+  img,
+  picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+    background: transparent;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:focus {
+    outline: 3px solid var(--yellow-main);
+    outline-offset: 2px;
+  }
+
+  input[type='search'],
+  input[type='number'],
+  input,
+  textarea,
+  select {
+    -webkit-appearance: none;
+    appearance: none;
   }
 }
 

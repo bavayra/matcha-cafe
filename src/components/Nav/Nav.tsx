@@ -14,17 +14,14 @@ export default function Nav() {
       }`}
     >
       <nav className="max-w-screen-xl mx-auto px-5 h-14 flex items-center justify-between">
-        {/* Logo */}
         <a
           href="#hero"
-          className={`text-xl font-bold tracking-tight transition-colors ${
+          className={`text-[2.5rem] font-bold tracking-tight transition-colors ${
             isScrolled ? 'text-matcha-700' : 'text-cream-50'
           }`}
         >
-          MATCHA
+          SULU
         </a>
-
-        {/* Desktop links */}
         <ul className="hidden md:flex gap-8">
           {navItems.map(item => (
             <li key={item.href}>
@@ -39,8 +36,6 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-
-        {/* Mobile hamburger */}
         <button
           className="md:hidden flex flex-col gap-[5px] p-2"
           onClick={() => setMenuOpen(prev => !prev)}
@@ -64,8 +59,6 @@ export default function Nav() {
           />
         </button>
       </nav>
-
-      {/* Mobile dropdown */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
           menuOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'

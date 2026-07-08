@@ -1,19 +1,20 @@
-import heroImg from '../../../images/drinks/matcha-hero.webp'
+{
+  /*import heroImg from '../../../images/drinks/matcha-hero.webp'*/
+}
 
 export default function Hero() {
   return (
     <section id="hero" className="relative h-svh min-h-[580px] flex flex-col">
       {/* Background */}
+
       <div className="absolute inset-0 overflow-hidden">
-        <img src={heroImg} alt="Matcha café hero" className="w-full h-full object-cover" />
+        {/* <img src={heroImg} alt="Matcha café hero" className="w-full h-full object-cover" /> */}
         <div className="absolute inset-0 bg-gradient-to-b from-matcha-900/60 via-matcha-900/30 to-matcha-900/50" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 text-center">
-        <p className="text-sm font-medium tracking-[0.3em] text-matcha-300 uppercase mb-4">
-          Кафе
-        </p>
+        <p className="text-sm font-medium tracking-[0.3em] text-matcha-300 uppercase mb-4">Кафе</p>
         <h1 className="text-6xl md:text-8xl font-bold text-cream-50 leading-none tracking-tight mb-5">
           MATCHA
         </h1>
