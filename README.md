@@ -1,6 +1,6 @@
 # Matcha — Vite + React + TypeScript + Tailwind
 
-Краткое описание (русский)
+Краткое описание
 
 Это одностраничный проект, созданный на базе Vite с использованием React и TypeScript. Для оформления используется Tailwind CSS; подключены кастомные шрифты и набор компонентов для отображения напитков, истории и контактов.
 
@@ -8,7 +8,7 @@ Short description (English)
 
 Single-page project built with Vite, React and TypeScript. Styling is done with Tailwind CSS; custom fonts and a set of UI components are included for drinks, history and contacts.
 
-Технологии (русский)
+Технологии 
 
 - Vite
 - React + TypeScript
@@ -22,21 +22,21 @@ Technologies (English)
 - Tailwind CSS (Preflight)
 - PostCSS
 
-Ключевые особенности (русский)
+Ключевые особенности
 
 - Минималистичный SPA-интерфейс
 - Компонентная структура для повторного использования
 - Кастомные шрифты локально в `fonts/`
 - Доступность: видимые индикаторы фокуса и семантическая разметка
 
-Key features (English)
+Key features
 
 - Minimal SPA layout
 - Reusable component structure
 - Local custom fonts in `fonts/`
 - Accessibility: visible focus indicators and semantic markup
 
-Быстрый старт (русский)
+Быстрый старт 
 
 1. Установите зависимости:
 
@@ -62,7 +62,7 @@ npm run build
 npm run preview
 ```
 
-Quick start (English)
+Quick start
 
 1. Install dependencies:
 
@@ -88,7 +88,7 @@ npm run build
 npm run preview
 ```
 
-Скрипты (русский)
+Скрипты
 
 В `package.json` определены основные скрипты проекта:
 
@@ -98,7 +98,7 @@ npm run preview
 - `lint` — запуск ESLint
 - `format` — форматирование кода через Prettier
 
-Scripts (English)
+Scripts
 
 The main scripts in `package.json`:
 
@@ -108,17 +108,17 @@ The main scripts in `package.json`:
 - `lint` — runs ESLint
 - `format` — formats code with Prettier
 
-Требования (русский)
+Требования
 
 - Node.js 18+ рекомендуется
 - npm (или pnpm/yarn) для управления зависимостями
 
-Prerequisites (English)
+Prerequisites
 
 - Node.js 18+ recommended
 - npm (or pnpm/yarn) to manage dependencies
 
-Структура проекта (русский)
+Структура проекта
 
 - `index.html` — точка входа
 - `src/` — исходники приложения
@@ -130,7 +130,7 @@ Prerequisites (English)
   - `fonts/` — шрифты и лицензии
 - `vite.config.ts`, `tsconfig.json`, `tailwind.config.js` — конфигурационные файлы
 
-Project structure (English)
+Project structure
 
 - `index.html` — entry point
 - `src/` — source code
@@ -142,62 +142,46 @@ Project structure (English)
   - `fonts/` — fonts and licenses
 - `vite.config.ts`, `tsconfig.json`, `tailwind.config.js` — config files
 
-Стили и шрифты (русский)
+Стили и шрифты
 
 Глобальные стили находятся в `src/index.css`. Tailwind Preflight выполняет базовый ресет; в `index.css` добавлены дополнительные правила для изображений, форм и видимых фокусов. Шрифты хранятся в `fonts/` и подключаются через `@font-face`.
 
-Styling & fonts (English)
+Styling & fonts
 
 Global styles live in `src/index.css`. Tailwind Preflight provides a base reset; `index.css` contains extra rules for images, form controls and visible focus styles. Fonts are stored in `fonts/` and loaded via `@font-face`.
 
-Доступность (русский)
+Доступность
 
 Сохранены видимые индикаторы фокуса (`:focus`) — это важно для пользователей клавиатурной навигации. Пожалуйста, не удаляйте outline; лучше стилизовать его при необходимости.
 
-Accessibility (English)
+Accessibility
 
 Visible focus indicators (`:focus`) are preserved — important for keyboard users. Do not remove outlines; style them if needed.
 
-Контрибьютинг (русский)
+Контрибьютинг
 
 1. Форкните репозиторий
 2. Создайте ветку `feat/your-feature`
 3. Откройте Pull Request с описанием изменений
 
-Contributing (English)
+Contributing
 
 1. Fork the repository
 2. Create a branch `feat/your-feature`
 3. Open a Pull Request describing your changes
 
-Деплой и демо (русский)
+Деплой и демо
 
 Для быстрого деплоя подойдёт Vercel или Netlify — достаточно подключить репозиторий и указать команду сборки `npm run build`.
 
-Deployment & demo (English)
+Deployment & demo
 
 Vercel or Netlify are suitable for quick deployment — connect the repo and use `npm run build` as the build command.
 
-Лицензия (русский)
+Лицензия
 
 Добавьте файл `LICENSE` в корень репозитория или укажите существующую лицензию в этом файле.
 
-License (English)
+License
 
 Add a `LICENSE` file to the repository root or reference the existing license in this file.
-
-Дальше (русский)
-
-Если нужно, могу:
-
-- Перевести README полностью на английский
-- Добавить разделы про CI, тесты, примеры компонентов или демо
-- Подготовить простой CONTRIBUTING.md и шаблон PR
-
-Next steps (English)
-
-If you want, I can:
-
-- Translate the README fully into English
-- Add sections for CI, tests, example components or a demo
-- Prepare a simple CONTRIBUTING.md and PR template
