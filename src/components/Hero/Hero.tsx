@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--yellow-main)] to-[var(--green-main)]" />
       </div>
-      <div className="absolute inset-0 bg-[url('/images/drinks/matcha-hero.webp')] bg-[length:100vw_auto] md:bg-[length:70vw_auto] md:mt-10 bg-center bg-no-repeat opacity-60" />
+      <div className="absolute inset-0 bg-[url('/images/drinks/matcha-hero.webp')] bg-[length:100vw_auto] md:bg-[length:70vw_auto] lg:bg-[length:40vw_auto] md:mt-10 lg:mt-16 bg-center bg-no-repeat opacity-60" />
 
       <div className="relative z-10 flex-1 flex flex-col items-center justify-start translate-y-[35%] px-6 text-center">
         <h1 className="text-8xl md:text-9xl font-bold text-cream-50 leading-none tracking-tight">
