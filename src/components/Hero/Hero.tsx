@@ -17,12 +17,12 @@ export default function Hero() {
           <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold text-cream-50 leading-none tracking-tight">
             SULU
           </h1>
-          <p className="mt-4 text-2xl md:text-3xl lg:text-4xl text-[var(--white-main)] font-light leading-relaxed">
+          <p className="text-2xl md:text-3xl lg:text-4xl text-[var(--white-main)] font-light leading-relaxed">
             та самая матча
           </p>
           <a
             href="#drinks"
-            className="mt-8 md:mt-10 md:text-2xl inline-flex items-center gap-2 px-8 py-3 bg-[var(--green-main)] text-[var(--yellow-text)] rounded-xl hover:bg-[var(--yellow-main)] hover:text-[var(--green-main)] hover:scale-110 active:scale-95 transition-all duration-300 ease-in-out"
+            className="mt-4 md:mt-10 md:text-2xl inline-flex items-center gap-2 px-8 py-3 bg-[var(--green-main)] text-[var(--yellow-text)] rounded-xl hover:bg-[var(--yellow-main)] hover:text-[var(--green-main)] hover:scale-110 active:scale-95 transition-all duration-300 ease-in-out"
           >
             выбирай матчу
             <svg viewBox="0 0 24 24" fill="none" aria-hidden className="w-4 h-4 md:w-6 md:h-6">
