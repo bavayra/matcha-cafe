@@ -11,10 +11,10 @@ export default function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 hover-transition backdrop-blur-sm shadow-sm bg-transparent`}
     >
-      <nav className="max-w-screen-xl mx-auto p-8 h-14 flex items-center justify-between">
+      <nav className="max-w-screen-xl mx-auto p-8 md:p-10 h-14 flex items-center justify-between">
         <a
           href="#hero"
-          className={`text-[2.5rem] font-bold tracking-tight hover-transition hover:text-[var(--green-main)] ${
+          className={`text-[2.5rem] md:text-5xl font-bold tracking-tight hover-transition hover:text-[var(--green-main)] ${
             isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--white-main)]'
           }`}
         >
@@ -25,7 +25,7 @@ export default function Nav() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className={`text-sm font-medium hover-transition hover:text-matcha-400 ${
+                className={`text-lg font-medium hover-transition hover:text-matcha-400 ${
                   isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--white-main)]'
                 }`}
               >
