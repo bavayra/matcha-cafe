@@ -61,7 +61,7 @@
   }
 
   body {
-    @apply font-iosevka bg-cream-100 text-matcha-900 antialiased overflow-x-hidden;
+    @apply font-iosevka bg-[var(--green-main)] text-matcha-900 antialiased overflow-x-hidden;
   }
 
   *,
