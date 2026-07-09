@@ -67,7 +67,9 @@ export default function Nav() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="block px-6 py-3 text-sm font-medium text-matcha-700 hover:bg-matcha-50 hover-transition"
+                className={`block px-6 py-2 text-base font-semibold ${
+                  isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--green-main)]'
+                } hover:bg-[var(--white-main)] hover-transition`}
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}
