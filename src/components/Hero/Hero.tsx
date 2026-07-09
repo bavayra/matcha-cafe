@@ -1,5 +1,3 @@
-import heroImg from '../../../images/drinks/matcha-hero.webp'
-
 export default function Hero() {
   return (
     <section id="hero" className="relative h-svh min-h-[580px] flex flex-col">
@@ -15,7 +13,7 @@ export default function Hero() {
         </p>
         <a
           href="#drinks"
-          className="mt-10 inline-flex items-center gap-2 px-8 py-3 bg-[var(--green-main)] text-[var(--yellow-text)] font-normal rounded-xl hover:bg-[var(--yellow-main)] hover:text-[var(--green-main)]  hover:scale-110 active:scale-95 transition-all ease-in-out duration-300"
+          className="mt-10 inline-flex items-center gap-2 px-8 py-3 bg-[var(--green-main)] text-[var(--yellow-text)] font-normal rounded-xl hover:bg-[var(--yellow-main)] hover:text-[var(--green-main)]  hover:scale-110 active:scale-95 hover-transition"
         >
           выбирай матчу
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
