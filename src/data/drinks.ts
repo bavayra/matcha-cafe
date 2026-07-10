@@ -15,8 +15,8 @@ export interface DrinkTheme {
 
 export const drinkThemes: Record<string, DrinkTheme> = {
   classic: { cardBg: '#8ba888', accent: '#4a7c59', accentHover: '#3a6347', titleText: '#8ba888' },
-  blueberry: { cardBg: '#908b97', accent: '#6b52a8', accentHover: '#6b52a8', titleText: '#6b52a8' },
-  jasmine: { cardBg: '#f8de7e', accent: '#b89c3a', accentHover: '#9e8530', titleText: '#b89c3a' },
+  blueberry: { cardBg: '#908b97', accent: '#6b52a8', accentHover: '#6b52a8', titleText: '#908b97' },
+  jasmine: { cardBg: '#9c8b4f', accent: '#b89c3a', accentHover: '#9e8530', titleText: '#b89c3a' },
   strawberry: {
     cardBg: '#dfb9b9',
     accent: '#c25c5c',
