@@ -141,8 +141,8 @@
 
 @media (min-width: 2560px) {
   :root {
-    .bg-img-size-right {
-      margin-right: 20rem;
+    .bg-img-right {
+      margin-right: 30rem;
     }
     .h1-margin {
       margin-right: 10rem;
