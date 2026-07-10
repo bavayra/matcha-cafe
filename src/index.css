@@ -148,5 +148,14 @@
     .h1-margin {
       margin-right: 10rem;
     }
+    nav ul li a {
+      font-size: 2rem;
+    }
+    nav a {
+      font-size: 5rem;
+    }
+    nav {
+      padding: 3rem 6rem;
+    }
   }
 }

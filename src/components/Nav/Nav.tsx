@@ -11,7 +11,7 @@ export default function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 hover-transition backdrop-blur-sm shadow-sm bg-transparent`}
     >
-      <nav className="max-w-screen-xl mx-auto p-8 md:p-10 h-14 flex items-center justify-between">
+      <nav className="max-w-full mx-4 p-8 md:p-10 h-14 flex items-center justify-between">
         <a
           href="#hero"
           className={`text-[2.5rem] md:text-5xl font-bold tracking-tight hover-transition hover:text-[var(--green-main)] ${
