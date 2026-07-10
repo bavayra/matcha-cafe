@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="lg:grid lg:grid-cols-2 lg:gap-24 lg:justify-between lg:max-w-7xl lg:mx-auto">
         <div
           className="bg-img-size-right absolute inset-0 bg-[url('/images/drinks/matcha-hero.webp')] bg-no-repeat opacity-60 hover-transition
-                   bg-[length:92vw_auto] bg-left
+                   bg-[length:82vw_auto] bg-center
                    md:bg-[length:60vw_auto] 
                    lg:bg-[length:36vw_auto] lg:mt-10 lg:bg-right lg:mr-16
                    xl:bg-[length:30vw_auto]"
