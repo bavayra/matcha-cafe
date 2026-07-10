@@ -14,20 +14,20 @@ export interface DrinkTheme {
 }
 
 export const drinkThemes: Record<string, DrinkTheme> = {
-  classic: { cardBg: '#8ba888', accent: '#4a7c59', accentHover: '#3a6347', titleText: '#fdfcf8' },
-  blueberry: { cardBg: '#908b97', accent: '#6b52a8', accentHover: '#5a3e99', titleText: '#ede8f7' },
-  jasmine: { cardBg: '#f8de7e', accent: '#b89c3a', accentHover: '#9e8530', titleText: '#fef9ec' },
+  classic: { cardBg: '#8ba888', accent: '#4a7c59', accentHover: '#3a6347', titleText: '#8ba888' },
+  blueberry: { cardBg: '#908b97', accent: '#6b52a8', accentHover: '#6b52a8', titleText: '#6b52a8' },
+  jasmine: { cardBg: '#f8de7e', accent: '#b89c3a', accentHover: '#9e8530', titleText: '#b89c3a' },
   strawberry: {
     cardBg: '#dfb9b9',
     accent: '#c25c5c',
     accentHover: '#a84848',
-    titleText: '#fff0f0',
+    titleText: '#c25c5c',
   },
   coconut: {
-    cardBg: '#623916',
+    cardBg: '#D9CCAE',
     accent: '#c2a25c',
     accentHover: '#a88f48',
-    titleText: '#fff8e7',
+    titleText: '#c2a25c',
   },
 }
 

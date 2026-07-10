@@ -1,4 +1,4 @@
-﻿import { drinks } from '../../data/drinks'
+import { drinks } from '../../data/drinks'
 import DrinkCarousel from './DrinkCarousel'
 import { useState } from 'react'
 import { drinkThemes } from '../../data/drinks'

@@ -27,7 +27,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
 
       <div className="p-4 flex flex-col gap-3">
         <div>
-          <h3 className="text-lg font-bold text-matcha-900 leading-tight">{drink.name}</h3>
+          <h3 className="text-lg font-bold leading-tight">{drink.name}</h3>
           <p className="text-matcha-500 font-medium text-base mt-0.5">{drink.price} ₸</p>
 
           <p className="hidden md:block mt-2 text-sm text-matcha-600 font-light leading-relaxed">
