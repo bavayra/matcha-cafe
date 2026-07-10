@@ -10,12 +10,13 @@ export default function Hero() {
                    bg-[length:92vw_auto] bg-left
                    md:bg-[length:60vw_auto] 
                    lg:bg-[length:36vw_auto] lg:mt-10 lg:bg-right lg:mr-16
-                   xl:bg-[length:30vw_auto]"
+                   xl:bg-[length:30vw_auto]
+                  2xl:bg-[length:34vw_auto]"
         />
 
-        <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start justify-center text-center md:text-left w-full max-w-7xl  pt-16 md:pt-0">
-          <div className="flex flex-col items-center max-w-xl">
-            <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold text-[var(--white-main)] xl:text-[10rem] leading-none tracking-tight">
+        <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start justify-center text-center md:text-left w-full max-w-7xl pt-16 md:pt-0">
+          <div className="flex flex-col 2xl:mr-10 items-center max-w-xl">
+            <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold text-[var(--white-main)] xl:text-[10rem] 2xl:text-[13rem] leading-none tracking-tight">
               SULU
             </h1>
             <p className="text-2xl md:text-3xl lg:text-4xl text-[var(--white-main)] font-light leading-relaxed">
