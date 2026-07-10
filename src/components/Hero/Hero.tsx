@@ -10,8 +10,7 @@ export default function Hero() {
                    bg-[length:92vw_auto] bg-left
                    md:bg-[length:60vw_auto] 
                    lg:bg-[length:36vw_auto] lg:mt-10 lg:bg-right lg:mr-16
-                   xl:bg-[length:30vw_auto]
-                  2xl:bg-[length:34vw_auto]"
+                   xl:bg-[length:30vw_auto]"
         />
 
         <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start justify-center text-center md:text-left w-full max-w-7xl pt-16 md:pt-0">
