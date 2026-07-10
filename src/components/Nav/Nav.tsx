@@ -25,7 +25,7 @@ export default function Nav() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className={`text-lg font-medium hover-transition hover:text-[var(--green-main)] ${
+                className={`text-lg font-medium 2xl:text-2xl hover-transition hover:text-[var(--green-main)] ${
                   isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--white-main)]'
                 }`}
               >
