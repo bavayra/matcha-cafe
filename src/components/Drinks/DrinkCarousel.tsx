@@ -1,9 +1,11 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useRef } from 'react'
 import type { Drink } from '../../types'
 import DrinkCard from './DrinkCard'
 
 interface Props {
   drinks: Drink[]
+  active: number
+  onActiveChange: (index: number) => void
 }
 
 /**
@@ -33,16 +35,14 @@ const CARD_PARAMS: Record<number, { scale: number; opacity: number; zIndex: numb
   2: { scale: 0.5, opacity: 0.5, zIndex: 8 },
 }
 
-export default function DrinkCarousel({ drinks }: Props) {
-  const [active, setActive] = useState(0)
-
+export default function DrinkCarousel({ drinks, active, onActiveChange }: Props) {
   // Pointer-drag tracking
   const dragStartX = useRef<number | null>(null)
   const hasDragged = useRef(false)
 
   const goTo = useCallback(
-    (index: number) => setActive(Math.max(0, Math.min(drinks.length - 1, index))),
-    [drinks.length],
+    (index: number) => onActiveChange(Math.max(0, Math.min(drinks.length - 1, index))),
+    [drinks.length, onActiveChange],
   )
 
   const prev = useCallback(() => goTo(active - 1), [active, goTo])

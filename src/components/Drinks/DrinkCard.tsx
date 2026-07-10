@@ -14,6 +14,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
       className={`bg-white rounded-3xl overflow-hidden shadow-xl flex flex-col transition-shadow duration-300 ${
         isActive ? 'shadow-matcha-300/40' : 'shadow-black/10'
       }`}
+      style={{ background: 'var(--theme-card-bg)' }}
     >
       <div className="aspect-square w-full overflow-hidden">
         <img
@@ -54,7 +55,10 @@ export default function DrinkCard({ drink, isActive }: Props) {
               </button>
             </div>
 
-            <button className="w-full py-3 bg-matcha-600 text-cream-50 font-bold rounded-2xl hover:bg-matcha-500 active:scale-95 active:bg-matcha-700 transition-all text-base">
+            <button
+              className="w-full py-3 bg-matcha-600 text-cream-50 font-bold rounded-2xl hover:bg-matcha-500 active:scale-95 active:bg-matcha-700 transition-all text-base"
+              style={{ background: 'var(--theme-accent)' }}
+            >
               Купить · {(drink.price * quantity).toLocaleString('ru-RU')} ₸
             </button>
           </>
