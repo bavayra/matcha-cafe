@@ -5,20 +5,14 @@ export default function Hero() {
       className="relative h-svh min-h-[580px] flex flex-col justify-center bg-gradient-to-b from-[var(--yellow-main)] to-[var(--green-main)] px-6 md:px-12 lg:px-20 overflow-hidden"
     >
       <div className="lg:grid lg:grid-cols-2 lg:gap-24 lg:justify-between lg:max-w-7xl lg:mx-auto">
-        <div
-          className="bg-img-size-right absolute inset-0 bg-[url('/images/drinks/matcha-hero.webp')] bg-no-repeat opacity-60 hover-transition
-                   bg-[length:82vw_auto] bg-center
-                   md:bg-[length:60vw_auto] 
-                   lg:bg-[length:36vw_auto] lg:mt-10 lg:bg-right lg:mr-16
-                   xl:bg-[length:30vw_auto]"
-        />
+        <div className="bg-img-right absolute inset-0 bg-[url('/images/drinks/matcha-hero.webp')] bg-no-repeat opacity-60 hover-transition bg-[length:clamp(295.2px,calc(15.6727vw+238.7782px),640px)_auto] bg-center lg:mt-10 lg:bg-right lg:mr-16" />
 
         <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start justify-center text-center md:text-left w-full max-w-7xl pt-16 md:pt-0">
           <div className="flex flex-col 2xl:mr-10 items-center max-w-xl h1-margin">
-            <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold text-[var(--white-main)] xl:text-[10rem] 2xl:text-[13rem] leading-none tracking-tight">
+            <h1 className="text-[clamp(72px,calc(11.56462585vw+30.367347px),208px)] font-bold text-[var(--white-main)] leading-none tracking-tight">
               SULU
             </h1>
-            <p className="text-2xl md:text-3xl lg:text-4xl text-[var(--white-main)] font-light leading-relaxed">
+            <p className="text-[clamp(18px,calc(1.7741935vw+11.6139034px),40px)] text-[var(--white-main)] font-light leading-relaxed">
               та самая матча
             </p>
             <a
