@@ -15,7 +15,6 @@ export default function DrinkCard({ drink, isActive }: Props) {
         isActive ? 'shadow-matcha-300/40' : 'shadow-black/10'
       }`}
     >
-      {/* Image */}
       <div className="aspect-square w-full overflow-hidden">
         <img
           src={drink.image}
@@ -25,21 +24,18 @@ export default function DrinkCard({ drink, isActive }: Props) {
         />
       </div>
 
-      {/* Info */}
       <div className="p-4 flex flex-col gap-3">
         <div>
           <h3 className="text-lg font-bold text-matcha-900 leading-tight">{drink.name}</h3>
-          <p className="text-matcha-500 font-medium text-base mt-0.5">{drink.price} ₽</p>
-          {/* Description — desktop only */}
+          <p className="text-matcha-500 font-medium text-base mt-0.5">{drink.price} ₸</p>
+
           <p className="hidden md:block mt-2 text-sm text-matcha-600 font-light leading-relaxed">
             {drink.description}
           </p>
         </div>
 
-        {/* Controls only on active card */}
         {isActive && (
           <>
-            {/* Quantity */}
             <div className="flex items-center justify-center gap-4">
               <button
                 onClick={() => setQuantity(q => Math.max(1, q - 1))}
@@ -58,9 +54,8 @@ export default function DrinkCard({ drink, isActive }: Props) {
               </button>
             </div>
 
-            {/* Buy button */}
             <button className="w-full py-3 bg-matcha-600 text-cream-50 font-bold rounded-2xl hover:bg-matcha-500 active:scale-95 active:bg-matcha-700 transition-all text-base">
-              Купить · {(drink.price * quantity).toLocaleString('ru-RU')} ₽
+              Купить · {(drink.price * quantity).toLocaleString('ru-RU')} ₸
             </button>
           </>
         )}
