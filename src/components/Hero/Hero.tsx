@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 flex justify-center pb-6 lg:absolute lg:bottom-10 lg:left-1/2 lg:-translate-x-1/2">
+      <div className="absolute z-10 flex lg:bottom-10 self-center bottom-4">
         <div className="flex flex-col items-center gap-1 animate-bounce text-[var(--yellow-main)]">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
             <path
