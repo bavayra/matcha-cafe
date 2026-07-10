@@ -6,7 +6,7 @@ export default function Hero() {
     >
       <div className="lg:grid lg:grid-cols-2 lg:gap-24 lg:justify-between lg:max-w-7xl lg:mx-auto">
         <div
-          className="absolute inset-0 bg-[url('/images/drinks/matcha-hero.webp')] bg-no-repeat opacity-60 hover-transition
+          className="bg-img-size-right absolute inset-0 bg-[url('/images/drinks/matcha-hero.webp')] bg-no-repeat opacity-60 hover-transition
                    bg-[length:92vw_auto] bg-left
                    md:bg-[length:60vw_auto] 
                    lg:bg-[length:36vw_auto] lg:mt-10 lg:bg-right lg:mr-16
@@ -14,7 +14,7 @@ export default function Hero() {
         />
 
         <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start justify-center text-center md:text-left w-full max-w-7xl pt-16 md:pt-0">
-          <div className="flex flex-col 2xl:mr-10 items-center max-w-xl">
+          <div className="flex flex-col 2xl:mr-10 items-center max-w-xl h1-margin">
             <h1 className="text-7xl sm:text-8xl md:text-9xl font-bold text-[var(--white-main)] xl:text-[10rem] 2xl:text-[13rem] leading-none tracking-tight">
               SULU
             </h1>
