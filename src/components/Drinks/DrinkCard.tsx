@@ -34,14 +34,17 @@ export default function DrinkCard({ drink, isActive }: Props) {
             {drink.price} ₸
           </p>
 
-          <p className="hidden md:block mt-2 text-sm text-matcha-600 font-light leading-relaxed">
+          <p
+            className="hidden md:block mt-2 text-base leading-relaxed"
+            style={{ color: 'var(--theme-title)' }}
+          >
             {drink.description}
           </p>
         </div>
 
         {isActive && (
           <>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center my-2 gap-4">
               <button
                 onClick={() => setQuantity(q => Math.max(1, q - 1))}
                 className="w-9 h-9 rounded-full border-2 border-[var(--white-main)] text-[var(--white-main)] flex items-center justify-center text-lg font-bold hover:bg-matcha-50 active:bg-matcha-100 transition-colors select-none"

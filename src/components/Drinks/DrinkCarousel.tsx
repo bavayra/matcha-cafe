@@ -117,7 +117,7 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
           return (
             <div
               key={drink.id}
-              className="absolute left-1/2 top-1/2 w-[80vw] max-w-[360px] cursor-pointer"
+              className="absolute left-1/2 top-1/2 w-[80vw] sm:max-w-[300px] max-w-[360px] cursor-pointer"
               style={{
                 transform: `translate(calc(-50% + ${translateVw(offset)}vw), -50%) scale(${scale})`,
                 opacity,

@@ -58,7 +58,7 @@ export const drinks: Drink[] = [
     slug: 'classic',
     name: 'КЛАССИЧЕСКАЯ МАТЧА',
     price: 1500,
-    description: 'Традиционный матча-латте на растительном молоке с глубокими нотками умами',
+    description: 'Традиционный матча-латте с глубокими нотками умами',
     image: classicImg,
   },
   {
