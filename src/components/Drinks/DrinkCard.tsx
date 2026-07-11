@@ -11,7 +11,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
 
   return (
     <div
-      className={`rounded-3xl overflow-hidden drop-shadow-xl flex flex-col transition-shadow duration-300 ${
+      className={`rounded-3xl overflow-hidden drop-shadow-md flex flex-col transition-shadow duration-300 ${
         isActive ? 'shadow-black/80' : 'shadow-black/10'
       }`}
       style={{ background: 'var(--theme-card-bg)' }}
