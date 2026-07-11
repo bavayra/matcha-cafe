@@ -35,7 +35,7 @@ const CARD_PARAMS: Record<number, { scale: number; opacity: number; zIndex: numb
 }
 
 const DESKTOP_STEP = 48
-const MOBILE_STEP = 36
+const MOBILE_STEP = 56
 
 export default function DrinkCarousel({ drinks, active, onActiveChange }: Props) {
   const [stepVw, setStepVw] = useState<number>(() => {
