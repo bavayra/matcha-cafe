@@ -127,8 +127,8 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
             onClick={() => goTo(i)}
             className={`rounded-full transition-all duration-300 ${
               i === active
-                ? 'w-7 h-2.5 bg-matcha-600'
-                : 'w-2.5 h-2.5 bg-matcha-300 hover:bg-matcha-400'
+                ? 'w-7 h-2.5 bg-[var(--theme-accent)] hover:bg-[var(--theme-accent-hover)]'
+                : 'w-2.5 h-2.5 bg-[var(--theme-card-bg)] hover:bg-[var(--theme-accent-hover)]'
             }`}
           />
         ))}

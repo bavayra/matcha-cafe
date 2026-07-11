@@ -9,22 +9,21 @@ export default function Drinks() {
   return (
     <section
       id="drinks"
-      className="py-16 bg-[var(--green-main)] overflow-hidden"
+      className="py-16 overflow-hidden"
       style={
         {
+          '--theme-section-bg': theme.sectionBg,
           '--theme-card-bg': theme.cardBg,
           '--theme-accent': theme.accent,
           '--theme-accent-hover': theme.accentHover,
           '--theme-title': theme.titleText,
-          transition: 'background 0.4s',
+          backgroundColor: 'color-mix(in srgb, var(--theme-card-bg) 70%, transparent)',
+          transition: 'background-color 0.4s',
         } as React.CSSProperties
       }
     >
       <div className="text-center px-6 mb-10">
-        <h2
-          className="text-3xl font-bold text-[var(--yellow-main)]"
-          style={{ color: 'var(--theme-title)' }}
-        >
+        <h2 className="text-3xl font-bold" style={{ color: 'var(--theme-title)' }}>
           ВЫБИРАЙ МАТЧУ
         </h2>
       </div>

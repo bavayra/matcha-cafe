@@ -54,11 +54,42 @@
 
   --yellow-text: #bdca7a;
 
-  --matcha-classic: #8ba888;
-  --matcha-blueberry: #908b97;
-  --matcha-coconut: #623916;
-  --matcha-jasmine: #f8de7e;
-  --matcha-strawberry: #dfb9b9;
+  /* Matcha colors */
+
+  /*Classic*/
+  --color-classic-section-bg: #8ba888;
+  --color-classic-bg: #8ba888;
+  --color-classic-accent: #4a7c59;
+  --color-classic-title: #2f533a;
+  --color-classic-hover: #3a6347;
+
+  /*Blueberry*/
+  --color-blueberry-section-bg: #908b97;
+  --color-blueberry-bg: #908b97;
+  --color-blueberry-accent: #6b52a8;
+  --color-blueberry-title: #423268;
+  --color-blueberry-hover: #6b52a8;
+
+  /*Jasmine*/
+  --color-jasmine-section-bg: #9c8b4f;
+  --color-jasmine-bg: #9c8b4f;
+  --color-jasmine-accent: #b89c3a;
+  --color-jasmine-title: #ebdda8;
+  --color-jasmine-hover: #9e8530;
+
+  /*Strawberry*/
+  --color-strawberry-section-bg: #dfb9b9;
+  --color-strawberry-bg: #dfb9b9;
+  --color-strawberry-accent: #c25c5c;
+  --color-strawberry-title: #a14949;
+  --color-strawberry-hover: #a84848;
+
+  /*Coconut*/
+  --color-coconut-section-bg: #d9ccae;
+  --color-coconut-bg: #d9ccae;
+  --color-coconut-accent: #c2a25c;
+  --color-coconut-title: #69552e;
+  --color-coconut-hover: #a88f48;
 }
 
 /* ── Base ── */

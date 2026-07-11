@@ -7,6 +7,7 @@ import strawberryImg from '../../images/drinks/strawberry.webp'
 import coconutImg from '../../images/drinks/coconut.webp'
 
 export interface DrinkTheme {
+  sectionBg: string
   cardBg: string
   accent: string
   accentHover: string
@@ -14,20 +15,40 @@ export interface DrinkTheme {
 }
 
 export const drinkThemes: Record<string, DrinkTheme> = {
-  classic: { cardBg: '#8ba888', accent: '#4a7c59', accentHover: '#3a6347', titleText: '#8ba888' },
-  blueberry: { cardBg: '#908b97', accent: '#6b52a8', accentHover: '#6b52a8', titleText: '#908b97' },
-  jasmine: { cardBg: '#9c8b4f', accent: '#b89c3a', accentHover: '#9e8530', titleText: '#b89c3a' },
+  classic: {
+    sectionBg: 'var(--color-classic-section-bg)',
+    cardBg: 'var(--color-classic-bg)',
+    accent: 'var(--color-classic-accent)',
+    accentHover: 'var(--color-classic-hover)',
+    titleText: 'var(--color-classic-title)',
+  },
+  blueberry: {
+    sectionBg: 'var(--color-blueberry-section-bg)',
+    cardBg: 'var(--color-blueberry-bg)',
+    accent: 'var(--color-blueberry-accent)',
+    accentHover: 'var(--color-blueberry-hover)',
+    titleText: 'var(--color-blueberry-title)',
+  },
+  jasmine: {
+    sectionBg: 'var(--color-jasmine-section-bg)',
+    cardBg: 'var(--color-jasmine-bg)',
+    accent: 'var(--color-jasmine-accent)',
+    accentHover: 'var(--color-jasmine-hover)',
+    titleText: 'var(--color-jasmine-title)',
+  },
   strawberry: {
-    cardBg: '#dfb9b9',
-    accent: '#c25c5c',
-    accentHover: '#a84848',
-    titleText: '#c25c5c',
+    sectionBg: 'var(--color-strawberry-section-bg)',
+    cardBg: 'var(--color-strawberry-bg)',
+    accent: 'var(--color-strawberry-accent)',
+    accentHover: 'var(--color-strawberry-hover)',
+    titleText: 'var(--color-strawberry-title)',
   },
   coconut: {
-    cardBg: '#D9CCAE',
-    accent: '#c2a25c',
-    accentHover: '#a88f48',
-    titleText: '#c2a25c',
+    sectionBg: 'var(--color-coconut-section-bg)',
+    cardBg: 'var(--color-coconut-bg)',
+    accent: 'var(--color-coconut-accent)',
+    accentHover: 'var(--color-coconut-hover)',
+    titleText: 'var(--color-coconut-title)',
   },
 }
 
