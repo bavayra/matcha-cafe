@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState, useEffect } from 'react'
+import { useCallback, useRef } from 'react'
 import type { Drink } from '../../types'
 import DrinkCard from './DrinkCard'
 
@@ -34,46 +34,9 @@ const CARD_PARAMS: Record<number, { scale: number; opacity: number; zIndex: numb
   2: { scale: 0.5, opacity: 0.5, zIndex: 8 },
 }
 
-const MOBILE_STEP = 56
-const TABLET_STEP = 48
-const DESKTOP_STEP = 30
+const CARD_GAP_VW = 5
 
 export default function DrinkCarousel({ drinks, active, onActiveChange }: Props) {
-  const [stepVw, setStepVw] = useState<number>(() => {
-    if (typeof window === 'undefined') return TABLET_STEP
-
-    const width = window.innerWidth
-
-    if (width >= 1024) {
-      return DESKTOP_STEP
-    } else if (width <= 599) {
-      return MOBILE_STEP
-    } else {
-      return TABLET_STEP
-    }
-  })
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    const handleResize = () => {
-      const width = window.innerWidth
-      if (width >= 1024) {
-        setStepVw(DESKTOP_STEP)
-      } else if (width <= 599) {
-        setStepVw(MOBILE_STEP)
-      } else {
-        setStepVw(TABLET_STEP)
-      }
-    }
-    handleResize()
-
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  const translateVw = (offset: number) => offset * stepVw
-
   const dragStartX = useRef<number | null>(null)
   const hasDragged = useRef(false)
 
@@ -136,7 +99,7 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
               key={drink.id}
               className="absolute left-1/2 top-1/2 w-[80vw] sm:max-w-[300px] max-w-[360px] cursor-pointer"
               style={{
-                transform: `translate(calc(-50% + ${translateVw(offset)}vw), -50%) scale(${scale})`,
+                transform: `translate(calc(-50% + ${offset} * (30vw + ${CARD_GAP_VW}vw)), -50%) scale(${scale})`,
                 opacity,
                 zIndex,
                 transition:
