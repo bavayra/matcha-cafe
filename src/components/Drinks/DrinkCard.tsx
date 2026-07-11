@@ -27,7 +27,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
 
       <div className="p-4 flex flex-col gap-3">
         <div>
-          <h3 className="text-xl font-light text-[var(--white-main)] leading-tight">
+          <h3 className="text-2xl font-light text-[var(--white-main)] leading-tight">
             {drink.name}
           </h3>
           <p className="text-[var(--white-main)] font-light text-lg tracking-wider mt-0.5">
