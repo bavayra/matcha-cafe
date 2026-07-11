@@ -40,11 +40,11 @@ const MOBILE_STEP = 56
 export default function DrinkCarousel({ drinks, active, onActiveChange }: Props) {
   const [stepVw, setStepVw] = useState<number>(() => {
     if (typeof window === 'undefined') return DESKTOP_STEP
-    return window.innerWidth <= 639 ? MOBILE_STEP : DESKTOP_STEP
+    return window.innerWidth <= 599 ? MOBILE_STEP : DESKTOP_STEP
   })
 
   useEffect(() => {
-    const mq = window.matchMedia('(max-width: 639px)')
+    const mq = window.matchMedia('(max-width: 599px)')
     const onChange = (e: MediaQueryListEvent | MediaQueryList) =>
       setStepVw('matches' in e && e.matches ? MOBILE_STEP : DESKTOP_STEP)
     onChange(mq)
