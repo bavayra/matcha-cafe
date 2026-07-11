@@ -47,7 +47,7 @@ export default function Contacts() {
   return (
     <section id="contacts" className="py-16 bg-matcha-900 text-cream-100">
       <div className="max-w-lg mx-auto px-6 flex flex-col gap-10">
-        <h2 className="text-4xl font-bold text-center">Контакты</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold text-center">СВЯЗЬ</h2>
 
         {/* Map */}
         <div className="rounded-2xl overflow-hidden">

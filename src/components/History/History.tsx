@@ -22,7 +22,7 @@ export default function History() {
   return (
     <section id="history" className="py-16 bg-matcha-900 text-cream-100">
       <div className="max-w-lg mx-auto px-6 flex flex-col gap-10">
-        <h2 className="text-4xl font-bold text-center">История матча</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold text-center">МАТЧА?</h2>
 
         {blocks.map((block, i) => (
           <div key={i} className="flex flex-col gap-6">
