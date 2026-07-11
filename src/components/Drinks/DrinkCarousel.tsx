@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react'
+import { useCallback, useRef, useState, useEffect } from 'react'
 import type { Drink } from '../../types'
 import DrinkCard from './DrinkCard'
 
@@ -26,7 +26,6 @@ interface Props {
  */
 
 // Distance in vw between consecutive card centres
-const STEP_VW = 48
 
 // Visual parameters per distance from active
 const CARD_PARAMS: Record<number, { scale: number; opacity: number; zIndex: number }> = {
@@ -35,8 +34,29 @@ const CARD_PARAMS: Record<number, { scale: number; opacity: number; zIndex: numb
   2: { scale: 0.5, opacity: 0.5, zIndex: 8 },
 }
 
+const DESKTOP_STEP = 48
+const MOBILE_STEP = 36
+
 export default function DrinkCarousel({ drinks, active, onActiveChange }: Props) {
-  // Pointer-drag tracking
+  const [stepVw, setStepVw] = useState<number>(() => {
+    if (typeof window === 'undefined') return DESKTOP_STEP
+    return window.innerWidth <= 639 ? MOBILE_STEP : DESKTOP_STEP
+  })
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 639px)')
+    const onChange = (e: MediaQueryListEvent | MediaQueryList) =>
+      setStepVw('matches' in e && e.matches ? MOBILE_STEP : DESKTOP_STEP)
+    onChange(mq)
+    if (mq.addEventListener) mq.addEventListener('change', onChange)
+    else mq.addListener(onChange)
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener('change', onChange)
+      else mq.removeListener(onChange)
+    }
+  }, [])
+  const translateVw = (offset: number) => offset * stepVw
+
   const dragStartX = useRef<number | null>(null)
   const hasDragged = useRef(false)
 
@@ -93,14 +113,13 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
           if (absOffset > 2) return null
 
           const { scale, opacity, zIndex } = CARD_PARAMS[absOffset]
-          const translateVw = offset * STEP_VW
 
           return (
             <div
               key={drink.id}
               className="absolute left-1/2 top-1/2 w-[80vw] max-w-[360px] cursor-pointer"
               style={{
-                transform: `translate(calc(-50% + ${translateVw}vw), -50%) scale(${scale})`,
+                transform: `translate(calc(-50% + ${translateVw(offset)}vw), -50%) scale(${scale})`,
                 opacity,
                 zIndex,
                 transition:
