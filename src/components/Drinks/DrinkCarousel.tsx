@@ -34,27 +34,44 @@ const CARD_PARAMS: Record<number, { scale: number; opacity: number; zIndex: numb
   2: { scale: 0.5, opacity: 0.5, zIndex: 8 },
 }
 
-const TABLET_STEP = 48
 const MOBILE_STEP = 56
+const TABLET_STEP = 48
+const DESKTOP_STEP = 30
 
 export default function DrinkCarousel({ drinks, active, onActiveChange }: Props) {
   const [stepVw, setStepVw] = useState<number>(() => {
     if (typeof window === 'undefined') return TABLET_STEP
-    return window.innerWidth <= 599 ? MOBILE_STEP : TABLET_STEP
+
+    const width = window.innerWidth
+
+    if (width >= 1024) {
+      return DESKTOP_STEP
+    } else if (width <= 599) {
+      return MOBILE_STEP
+    } else {
+      return TABLET_STEP
+    }
   })
 
   useEffect(() => {
-    const mq = window.matchMedia('(max-width: 599px)')
-    const onChange = (e: MediaQueryListEvent | MediaQueryList) =>
-      setStepVw('matches' in e && e.matches ? MOBILE_STEP : TABLET_STEP)
-    onChange(mq)
-    if (mq.addEventListener) mq.addEventListener('change', onChange)
-    else mq.addListener(onChange)
-    return () => {
-      if (mq.removeEventListener) mq.removeEventListener('change', onChange)
-      else mq.removeListener(onChange)
+    if (typeof window === 'undefined') return
+
+    const handleResize = () => {
+      const width = window.innerWidth
+      if (width >= 1024) {
+        setStepVw(DESKTOP_STEP)
+      } else if (width <= 599) {
+        setStepVw(MOBILE_STEP)
+      } else {
+        setStepVw(TABLET_STEP)
+      }
     }
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
+
   const translateVw = (offset: number) => offset * stepVw
 
   const dragStartX = useRef<number | null>(null)
