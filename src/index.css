@@ -159,6 +159,22 @@
   .hover-transition {
     transition: all 0.2s ease-in-out;
   }
+
+  .drinks-carousel-title {
+    font-size: 2.5rem;
+  }
+  .drink-title {
+    font-size: 1.725rem;
+  }
+  .drink-price {
+    font-size: 1.25rem;
+  }
+  .drink-description {
+    font-size: 1.25rem;
+  }
+  .drink-quantity {
+    font-size: 1.25rem;
+  }
 }
 
 /* ── Utilities ── */
@@ -181,6 +197,28 @@
   }
 }
 
+@media (min-width: 428px) {
+  :root {
+    .drinks-carousel-title {
+      font-size: 2.75rem;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  :root {
+    .drinks-carousel-title {
+      font-size: 3.5rem;
+    }
+    .drink-title {
+      font-size: 2rem;
+    }
+    .drink-price {
+      font-size: 1.5rem;
+    }
+  }
+}
+
 @media (min-width: 2460px) {
   :root {
     .bg-img-right {
@@ -200,6 +238,24 @@
     }
     .card-width {
       max-width: 400px;
+    }
+    .drink-title {
+      font-size: 2.25rem;
+    }
+    .dots-top {
+      margin-top: 2rem;
+    }
+    .drinks-carousel-title {
+      font-size: 5rem;
+    }
+    .drink-price {
+      font-size: 1.75rem;
+    }
+    .drink-description {
+      font-size: 1.5rem;
+    }
+    .drink-quantity {
+      font-size: 1.75rem;
     }
   }
 }

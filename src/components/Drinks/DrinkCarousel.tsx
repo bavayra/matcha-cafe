@@ -8,32 +8,10 @@ interface Props {
   onActiveChange: (index: number) => void
 }
 
-/**
- * Horizontal carousel.
- *
- * Layout (mobile):
- *   [±2 peek] [±1 partial] [ACTIVE 100%] [±1 partial] [±2 peek]
- *
- * The active card is centred at 50vw.
- * Each step away from active shifts the centre by STEP_VW.
- * Cards ±1 are scaled to 0.65 / 60% opacity.
- * Cards ±2 are scaled to 0.50 / 50% opacity (peek at edges).
- * Cards beyond ±2 are hidden.
- *
- * Swipe threshold: 50px horizontal drag triggers prev/next.
- * Dot tap navigates directly to that index.
- * Tapping a side card navigates to it.
- */
-
-// Distance in vw between consecutive card centres
-
-// Visual parameters per distance from active
 const CARD_PARAMS: Record<number, { scale: number; opacity: number; zIndex: number }> = {
   0: { scale: 1, opacity: 1, zIndex: 10 },
   1: { scale: 0.65, opacity: 0.6, zIndex: 9 },
 }
-
-const CARD_GAP_VW = 5
 
 export default function DrinkCarousel({ drinks, active, onActiveChange }: Props) {
   const dragStartX = useRef<number | null>(null)
@@ -78,7 +56,7 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
     <div className="flex flex-col items-center gap-6 select-none">
       {/* ── Track ── */}
       <div
-        className="relative w-[70vw] overflow-visible max-w-[360px] md:w-[300px]"
+        className="relative w-[70vw] overflow-visible max-w-[360px] md:w-[300px] md:my-8 2xl:my-14"
         style={{ height: 'min(calc(80vw + 210px), 580px)', touchAction: 'pan-y' }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
@@ -115,7 +93,11 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
       </div>
 
       {/* ── Dots ── */}
-      <div className="flex items-center gap-2" role="tablist" aria-label="Навигация по напиткам">
+      <div
+        className="flex items-center gap-2 dots-top"
+        role="tablist"
+        aria-label="Навигация по напиткам"
+      >
         {drinks.map((drink, i) => (
           <button
             key={drink.id}
@@ -123,10 +105,10 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
             aria-selected={i === active}
             aria-label={`${drink.name}`}
             onClick={() => goTo(i)}
-            className={`rounded-full transition-all duration-300 ${
+            className={`rounded-full hover-transition ${
               i === active
-                ? 'w-7 h-2.5 bg-[var(--theme-accent)] hover:bg-[var(--theme-accent-hover)]'
-                : 'w-2.5 h-2.5 bg-[var(--theme-card-bg)] hover:bg-[var(--theme-accent-hover)]'
+                ? 'w-8 h-3 sm:w-10 sm:h-4 bg-[var(--theme-accent)] hover:bg-[var(--theme-accent-hover)]'
+                : 'w-3 h-3 sm:w-4 sm:h-4 bg-[var(--theme-card-bg)] hover:bg-[var(--theme-accent-hover)]'
             }`}
           />
         ))}

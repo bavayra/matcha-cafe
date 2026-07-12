@@ -25,17 +25,17 @@ export default function DrinkCard({ drink, isActive }: Props) {
         />
       </div>
 
-      <div className="p-4 flex flex-col gap-3">
+      <div className="p-4 2xl:p-6 flex flex-col gap-3">
         <div>
-          <h3 className="text-2xl font-light text-[var(--white-main)] leading-tight">
+          <h3 className="drink-title font-light text-[var(--white-main)] leading-tight">
             {drink.name}
           </h3>
-          <p className="text-[var(--white-main)] font-light text-lg tracking-wider mt-0.5">
+          <p className="text-[var(--white-main)] font-light drink-price tracking-wider mt-0.5">
             {drink.price} ₸
           </p>
 
           <p
-            className="hidden md:block mt-2 text-base leading-relaxed"
+            className="hidden md:block mt-2 drink-description leading-tight tracking-tight"
             style={{ color: 'var(--theme-title)' }}
           >
             {drink.description}
@@ -52,7 +52,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
               >
                 −
               </button>
-              <span className="w-8 text-center text-lg font-medium text-[var(--white-main)] tabular-nums">
+              <span className="w-8 text-center drink-quantity font-medium text-[var(--white-main)] tabular-nums">
                 {quantity}
               </span>
               <button
@@ -65,7 +65,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
             </div>
 
             <button
-              className="w-full py-3 bg-matcha-600 text-cream-50 font-light rounded-2xl hover:bg-matcha-500 active:scale-95 active:bg-matcha-700 transition-all text-base"
+              className="w-full py-3 text-cream-50 font-light rounded-2xl hover:bg-matcha-500 2xl:text-xl active:scale-95 mb-3 active:bg-matcha-700 transition-all text-lg"
               style={{ background: 'var(--theme-accent)' }}
             >
               КУПИТЬ · {(drink.price * quantity).toLocaleString('ru-RU')} ₸
