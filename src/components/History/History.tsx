@@ -25,7 +25,7 @@ export default function History() {
 
         {blocks.map((block, i) => (
           <div key={i} className="flex flex-col gap-6">
-            <p className="font-light leading-relaxed text-[var(--yellow-text)] history-font-size">
+            <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
               {block.text}
             </p>
 
