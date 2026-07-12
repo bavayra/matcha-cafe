@@ -30,12 +30,13 @@ export default function DrinkCard({ drink, isActive }: Props) {
           <h3 className="drink-title font-light text-[var(--white-main)] leading-tight">
             {drink.name}
           </h3>
-          <p className="text-[var(--white-main)] font-light drink-price tracking-wider mt-0.5">
+          <p className="text-[var(--white-main)] font-light drink-details tracking-wider mt-0.5">
             {drink.price} ₸
           </p>
 
           <p
-            className="hidden md:block mt-2 drink-description leading-tight tracking-tight"
+            id="drink-description"
+            className="hidden md:block mt-2 drink-details leading-tight tracking-tight"
             style={{ color: 'var(--theme-title)' }}
           >
             {drink.description}
@@ -52,7 +53,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
               >
                 −
               </button>
-              <span className="w-8 text-center drink-quantity font-medium text-[var(--white-main)] tabular-nums">
+              <span className="w-8 text-center drink-details font-medium text-[var(--white-main)] tabular-nums">
                 {quantity}
               </span>
               <button

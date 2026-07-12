@@ -159,20 +159,13 @@
   .hover-transition {
     transition: all 0.3s ease-in-out;
   }
-
   .section-title {
     font-size: 2.5rem;
   }
   .drink-title {
     font-size: 1.725rem;
   }
-  .drink-price {
-    font-size: 1.25rem;
-  }
-  .drink-description {
-    font-size: 1.25rem;
-  }
-  .drink-quantity {
+  .drink-details {
     font-size: 1.25rem;
   }
   .history-font-size {
@@ -222,7 +215,8 @@
     .drink-title {
       font-size: 2rem;
     }
-    .drink-price {
+
+    .drink-details {
       font-size: 1.5rem;
     }
     .history-font-size {
@@ -260,14 +254,11 @@
     .section-title {
       font-size: 5rem;
     }
-    .drink-price {
+    .drink-details {
       font-size: 1.75rem;
     }
-    .drink-description {
-      font-size: 1.5rem;
-    }
-    .drink-quantity {
-      font-size: 1.75rem;
+    #drink-description {
+      font-size: 1.3rem;
     }
   }
 }
