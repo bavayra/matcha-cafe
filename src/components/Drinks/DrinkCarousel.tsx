@@ -31,7 +31,6 @@ interface Props {
 const CARD_PARAMS: Record<number, { scale: number; opacity: number; zIndex: number }> = {
   0: { scale: 1, opacity: 1, zIndex: 10 },
   1: { scale: 0.65, opacity: 0.6, zIndex: 9 },
-  2: { scale: 0.5, opacity: 0.5, zIndex: 8 },
 }
 
 const CARD_GAP_VW = 5
@@ -79,7 +78,7 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
     <div className="flex flex-col items-center gap-6 select-none">
       {/* ── Track ── */}
       <div
-        className="relative w-full overflow-hidden"
+        className="relative w-[70vw] overflow-visible max-w-[360px] md:w-[300px]"
         style={{ height: 'min(calc(80vw + 210px), 580px)', touchAction: 'pan-y' }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
@@ -90,16 +89,16 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
           const offset = index - active
           const absOffset = Math.abs(offset)
 
-          if (absOffset > 2) return null
+          if (absOffset > 1) return null
 
           const { scale, opacity, zIndex } = CARD_PARAMS[absOffset]
 
           return (
             <div
               key={drink.id}
-              className="absolute left-1/2 top-1/2 w-[80vw] sm:max-w-[300px] max-w-[360px] cursor-pointer"
+              className="absolute left-1/2 top-1/2 w-[80vw] card-width  cursor-pointer"
               style={{
-                transform: `translate(calc(-50% + ${offset} * (30vw + ${CARD_GAP_VW}vw)), -50%) scale(${scale})`,
+                transform: `translate(calc(-50% + ${offset} * (min(66vw, 297px) + 5vw)), -50%) scale(${scale})`,
                 opacity,
                 zIndex,
                 transition:

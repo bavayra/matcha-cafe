@@ -90,6 +90,10 @@
   --color-coconut-accent: #c2a25c;
   --color-coconut-title: #69552e;
   --color-coconut-hover: #a88f48;
+
+  .card-width {
+    max-width: 360px;
+  }
 }
 
 /* ── Base ── */
@@ -177,7 +181,7 @@
   }
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 2460px) {
   :root {
     .bg-img-right {
       margin-right: 30rem;
@@ -193,6 +197,9 @@
     }
     nav {
       padding: 3rem 6rem;
+    }
+    .card-width {
+      max-width: 400px;
     }
   }
 }
