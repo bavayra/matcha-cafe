@@ -157,10 +157,10 @@
   }
 
   .hover-transition {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
-  .drinks-carousel-title {
+  .section-title {
     font-size: 2.5rem;
   }
   .drink-title {
@@ -199,7 +199,7 @@
 
 @media (min-width: 428px) {
   :root {
-    .drinks-carousel-title {
+    .section-title {
       font-size: 2.75rem;
     }
   }
@@ -207,7 +207,7 @@
 
 @media (min-width: 600px) {
   :root {
-    .drinks-carousel-title {
+    .section-title {
       font-size: 3.5rem;
     }
     .drink-title {
@@ -245,7 +245,7 @@
     .dots-top {
       margin-top: 2rem;
     }
-    .drinks-carousel-title {
+    .section-title {
       font-size: 5rem;
     }
     .drink-price {

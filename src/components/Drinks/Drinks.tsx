@@ -23,7 +23,7 @@ export default function Drinks() {
       }
     >
       <div className="text-center px-6 mb-10">
-        <h2 className="font-bold drinks-carousel-title" style={{ color: 'var(--theme-title)' }}>
+        <h2 className="font-bold section-title" style={{ color: 'var(--theme-title)' }}>
           ВЫБИРАЙ МАТЧУ
         </h2>
       </div>
