@@ -17,20 +17,22 @@ const photos = [matchaGoodImg, matchaProductsImg]
 
 export default function History() {
   return (
-    <section id="history" className="py-16 bg-[var(--green-main)] text-[var(--yellow-text)]">
-      <div className="max-w-lg mx-auto px-6 flex flex-col gap-6">
-        <h2 className="section-title font-bold text-center">МАТЧА?</h2>
+    <section id="history" className="py-16 bg-[var(--green-main)] ">
+      <div className="max-w-lg md:max-w-2xl mx-auto px-6 flex flex-col gap-6">
+        <h2 className="section-title font-bold text-center text-[var(--yellow-main)]">МАТЧА?</h2>
 
         {blocks.map((block, i) => (
           <div key={i} className="flex flex-col gap-6">
-            <p className="font-light leading-relaxed text-cream-200">{block.text}</p>
+            <p className="font-light leading-relaxed text-[var(--yellow-text)] history-font-size">
+              {block.text}
+            </p>
 
             {/* Photo between blocks, but not after the last one */}
             {i < photos.length && (
               <img
                 src={photos[i]}
                 alt="История матчи, ее польза и продукты"
-                className="rounded-2xl w-full object-cover my-6"
+                className="rounded-2xl w-full md:max-w-lg mx-auto object-cover my-6"
               />
             )}
           </div>

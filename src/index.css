@@ -175,6 +175,9 @@
   .drink-quantity {
     font-size: 1.25rem;
   }
+  .history-font-size {
+    font-size: 1.125rem;
+  }
 }
 
 /* ── Utilities ── */
@@ -215,6 +218,9 @@
     }
     .drink-price {
       font-size: 1.5rem;
+    }
+    .history-font-size {
+      font-size: 1.375rem;
     }
   }
 }
