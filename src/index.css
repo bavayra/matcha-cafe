@@ -178,6 +178,12 @@
   .history-font-size {
     font-size: 1.125rem;
   }
+  .h3-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--yellow-main);
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* ── Utilities ── */
