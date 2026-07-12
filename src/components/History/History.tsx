@@ -1,6 +1,8 @@
 import matchaGoodImg from '../../../images/photos/matcha-good.webp'
 import matchaProductsImg from '../../../images/photos/matcha-products.webp'
 
+import ScrollAnimateImage from '../ScrollAnimateImage'
+
 const blocks = [
   {
     text: 'Матча – это не просто зелёный порошок, а «энергетик» буддийских монахов. Её начали молоть ещё век назад в Китае, но японцы довели всё до эстетики: чайная церемония, бамбуковый венчик, тишина, дзен и полное отсутствие спешки. Тогда матча помогала не засыпать на многочасовых медитациях, сейчас – не выгореть в буднях.',
@@ -27,12 +29,11 @@ export default function History() {
               {block.text}
             </p>
 
-            {/* Photo between blocks, but not after the last one */}
             {i < photos.length && (
-              <img
+              <ScrollAnimateImage
                 src={photos[i]}
                 alt="История матчи, ее польза и продукты"
-                className="rounded-2xl w-full md:max-w-lg mx-auto object-cover my-6"
+                direction={i % 2 === 0 ? 'right' : 'left'}
               />
             )}
           </div>

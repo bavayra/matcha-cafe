@@ -18,7 +18,7 @@ export default function ScrollAnimateImage({ src, alt, direction }: ScrollAnimat
           if (ref.current) observer.unobserve(ref.current)
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.5 },
     )
 
     if (ref.current) observer.observe(ref.current)
@@ -28,7 +28,7 @@ export default function ScrollAnimateImage({ src, alt, direction }: ScrollAnimat
   const hiddenTranslateClass = direction === 'right' ? 'translate-x-[50vw]' : '-translate-x-[50vw]'
 
   return (
-    <div ref={ref} className="w-full overflow-x-hidden py-10 flex justify-center">
+    <div ref={ref} className="w-full py-10 flex justify-center">
       <div
         className={`
           w-full max-w-2xl px-4
