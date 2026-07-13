@@ -38,41 +38,33 @@ export default function History() {
           МАТЧА?
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-14">
-          {/* Ряд 1, кол 1: первый текстовый блок */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-x-14">
           <div className="flex items-center order-1 lg:order-none">
             <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
               {blocks[0].text}
             </p>
           </div>
-
-          {/* Ряд 1, кол 2: карусель */}
-          <div className="relative w-full aspect-square overflow-hidden rounded-2xl order-2 lg:order-none">
+          <div className="relative w-full max-w-[70vw] mx-auto aspect-square overflow-hidden order-2 lg:order-none rounded-2xl ">
             {carouselImages.map((src, idx) => (
               <img
                 key={idx}
                 src={src}
                 alt="История матчи"
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
+                className={`absolute inset-0 w-full mx-auto h-full object-contain duration-700 ease-in-out ${
                   idx === activeIndex ? 'opacity-100' : 'opacity-0'
                 }`}
               />
             ))}
           </div>
-
-          {/* Ряд 2, кол 1: выплывающая картинка с отступом справа */}
           <div className="lg:pr-10 order-4 lg:order-none">
             <ScrollAnimateImage src={matchaProductsImg} alt="Матча продукты" direction="left" />
           </div>
-
-          {/* Ряд 2, кол 2: второй текстовый блок */}
           <div className="flex items-center order-3 lg:order-none">
             <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
               {blocks[1].text}
             </p>
           </div>
 
-          {/* Ряд 3: третий текстовый блок на обе колонки */}
           <div className="lg:col-span-2 order-5 lg:order-none">
             <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
               {blocks[2].text}
