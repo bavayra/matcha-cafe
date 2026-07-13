@@ -1,8 +1,13 @@
-import matchaGoodImg from '../../../images/photos/matcha-good.webp'
-import matchaProductsImg from '../../../images/photos/matcha-products.webp'
+import { useState, useEffect } from 'react'
+import matchaLeafImg from '../../../images/photos/tea-leaf.webp'
+import matchaAntioxidantsImg from '../../../images/photos/antiox.webp'
+import matchaFormulasImg from '../../../images/photos/formulas.webp'
+
+import matchaProductsImg from '../../../images/photos/matcha-products-nobg.webp'
 
 import ScrollAnimateImage from '../ScrollAnimateImage'
-import leavesPatternImg from '../../../images/photos/leaves-pattern.webp'
+
+const carouselImages = [matchaLeafImg, matchaAntioxidantsImg, matchaFormulasImg]
 
 const blocks = [
   {
@@ -16,30 +21,47 @@ const blocks = [
   },
 ]
 
-const photos = [matchaGoodImg, matchaProductsImg]
-
 export default function History() {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(prev => (prev + 1) % carouselImages.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-    <section id="history" className="py-16 bg-[var(--green-main)] ">
+    <section id="history" className="py-16 bg-[var(--green-main)]">
       <div className="max-w-lg md:max-w-2xl mx-auto px-6 flex flex-col gap-6">
         <h2 className="section-title font-bold text-center text-[var(--yellow-main)]">МАТЧА?</h2>
 
         {blocks.map((block, i) => (
           <div key={i} className="flex flex-col gap-6">
-            <img
-              src={leavesPatternImg}
-              alt="Узор из листьев матчи"
-              className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
-            />
             <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
               {block.text}
             </p>
 
-            {i < photos.length && (
+            {i === 0 && (
+              <div className="relative w-full aspect-square overflow-hidden rounded-2xl">
+                {carouselImages.map((src, idx) => (
+                  <img
+                    key={idx}
+                    src={src}
+                    alt="История матчи"
+                    className={`absolute inset-0 w-full h-auto object-contain transition-opacity duration-700 ease-in-out ${
+                      idx === activeIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
+              </div>
+            )}
+
+            {i === 1 && (
               <ScrollAnimateImage
-                src={photos[i]}
+                src={matchaProductsImg}
                 alt="История матчи, ее польза и продукты"
-                direction={i % 2 === 0 ? 'right' : 'left'}
+                direction="left"
               />
             )}
           </div>

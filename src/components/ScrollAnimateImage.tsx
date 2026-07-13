@@ -40,7 +40,7 @@ export default function ScrollAnimateImage({ src, alt, direction }: ScrollAnimat
           }
         `}
       >
-        <img src={src} alt={alt} className="w-full h-auto rounded-2xl shadow-2xl object-cover" />
+        <img src={src} alt={alt} className="w-full h-auto rounded-2xl object-cover" />
       </div>
     </div>
   )
