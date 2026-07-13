@@ -38,13 +38,13 @@ export default function History() {
           МАТЧА?
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-x-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 md:gap-y-10 lg:gap-x-14">
           <div className="flex items-center order-1 lg:order-none">
             <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
               {blocks[0].text}
             </p>
           </div>
-          <div className="relative w-full max-w-[70vw] mx-auto aspect-square overflow-hidden order-2 lg:order-none rounded-2xl ">
+          <div className="relative w-full max-w-[70vw] md:max-w-[48vw] mx-auto aspect-square overflow-hidden order-2 lg:order-none rounded-2xl ">
             {carouselImages.map((src, idx) => (
               <img
                 key={idx}

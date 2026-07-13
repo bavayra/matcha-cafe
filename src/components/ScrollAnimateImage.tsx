@@ -37,7 +37,7 @@ export default function ScrollAnimateImage({
     <div ref={ref} className={`w-full flex justify-center ${className || ''}`}>
       <div
         className={`
-          w-full max-w-2xl px-4
+          w-full max-w-2xl px-4 md:max-w-md
           transition-all duration-1000 ease-out transform
           ${
             isIntersecting
