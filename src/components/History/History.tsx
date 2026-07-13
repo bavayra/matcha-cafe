@@ -43,7 +43,7 @@ export default function History() {
             </p>
 
             {i === 0 && (
-              <div className="relative w-full aspect-square overflow-hidden rounded-2xl">
+              <div className="relative w-full aspect-square overflow-hidden rounded-2xl md:max-w-[60vw] md:my-6 mx-auto">
                 {carouselImages.map((src, idx) => (
                   <img
                     key={idx}
@@ -60,8 +60,9 @@ export default function History() {
             {i === 1 && (
               <ScrollAnimateImage
                 src={matchaProductsImg}
-                alt="История матчи, ее польза и продукты"
+                alt="Матча продукты"
                 direction="left"
+                className="md:max-w-[60vw] mx-auto"
               />
             )}
           </div>

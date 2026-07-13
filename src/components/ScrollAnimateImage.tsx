@@ -4,9 +4,15 @@ interface ScrollAnimateImageProps {
   src: string
   alt: string
   direction: 'left' | 'right'
+  className?: string
 }
 
-export default function ScrollAnimateImage({ src, alt, direction }: ScrollAnimateImageProps) {
+export default function ScrollAnimateImage({
+  src,
+  alt,
+  direction,
+  className,
+}: ScrollAnimateImageProps) {
   const [isIntersecting, setIsIntersecting] = useState<boolean>(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -28,7 +34,7 @@ export default function ScrollAnimateImage({ src, alt, direction }: ScrollAnimat
   const hiddenTranslateClass = direction === 'right' ? 'translate-x-[50vw]' : '-translate-x-[50vw]'
 
   return (
-    <div ref={ref} className="w-full py-10 flex justify-center">
+    <div ref={ref} className={`w-full flex justify-center ${className || ''}`}>
       <div
         className={`
           w-full max-w-2xl px-4
