@@ -2,6 +2,7 @@ import matchaGoodImg from '../../../images/photos/matcha-good.webp'
 import matchaProductsImg from '../../../images/photos/matcha-products.webp'
 
 import ScrollAnimateImage from '../ScrollAnimateImage'
+import leavesPatternImg from '../../../images/photos/leaves-pattern.webp'
 
 const blocks = [
   {
@@ -25,6 +26,11 @@ export default function History() {
 
         {blocks.map((block, i) => (
           <div key={i} className="flex flex-col gap-6">
+            <img
+              src={leavesPatternImg}
+              alt="Узор из листьев матчи"
+              className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
+            />
             <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
               {block.text}
             </p>
