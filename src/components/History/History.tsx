@@ -33,18 +33,18 @@ export default function History() {
 
   return (
     <section id="history" className="py-16 bg-[var(--green-main)]">
-      <div className="max-w-lg md:max-w-2xl lg:max-w-5xl mx-auto px-6">
+      <div className="max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto px-6">
         <h2 className="section-title font-bold text-center text-[var(--yellow-main)] mb-8">
           МАТЧА?
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 md:gap-y-10 lg:gap-x-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 md:gap-y-10  lg:gap-y-20">
           <div className="flex items-center order-1 lg:order-none">
             <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
               {blocks[0].text}
             </p>
           </div>
-          <div className="relative w-full max-w-[70vw] md:max-w-[48vw] mx-auto aspect-square overflow-hidden order-2 lg:order-none rounded-2xl ">
+          <div className="relative w-full max-w-[70vw] md:max-w-[48vw] lg:max-w-[30vw] mx-auto aspect-square overflow-hidden order-2 lg:order-none rounded-2xl ">
             {carouselImages.map((src, idx) => (
               <img
                 key={idx}
@@ -57,7 +57,12 @@ export default function History() {
             ))}
           </div>
           <div className="lg:pr-10 order-4 lg:order-none">
-            <ScrollAnimateImage src={matchaProductsImg} alt="Матча продукты" direction="left" />
+            <ScrollAnimateImage
+              src={matchaProductsImg}
+              alt="Матча продукты"
+              direction="left"
+              className="lg:max-w-[35vw] mx-auto"
+            />
           </div>
           <div className="flex items-center order-3 lg:order-none">
             <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
