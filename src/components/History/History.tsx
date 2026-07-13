@@ -33,40 +33,52 @@ export default function History() {
 
   return (
     <section id="history" className="py-16 bg-[var(--green-main)]">
-      <div className="max-w-lg md:max-w-2xl mx-auto px-6 flex flex-col gap-6">
-        <h2 className="section-title font-bold text-center text-[var(--yellow-main)]">МАТЧА?</h2>
+      <div className="max-w-lg md:max-w-2xl lg:max-w-5xl mx-auto px-6">
+        <h2 className="section-title font-bold text-center text-[var(--yellow-main)] mb-8">
+          МАТЧА?
+        </h2>
 
-        {blocks.map((block, i) => (
-          <div key={i} className="flex flex-col gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-x-14">
+          {/* Ряд 1, кол 1: первый текстовый блок */}
+          <div className="flex items-center order-1 lg:order-none">
             <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
-              {block.text}
+              {blocks[0].text}
             </p>
-
-            {i === 0 && (
-              <div className="relative w-full aspect-square overflow-hidden rounded-2xl md:max-w-[60vw] md:my-6 mx-auto">
-                {carouselImages.map((src, idx) => (
-                  <img
-                    key={idx}
-                    src={src}
-                    alt="История матчи"
-                    className={`absolute inset-0 w-full h-auto object-contain transition-opacity duration-700 ease-in-out ${
-                      idx === activeIndex ? 'opacity-100' : 'opacity-0'
-                    }`}
-                  />
-                ))}
-              </div>
-            )}
-
-            {i === 1 && (
-              <ScrollAnimateImage
-                src={matchaProductsImg}
-                alt="Матча продукты"
-                direction="left"
-                className="md:max-w-[60vw] mx-auto"
-              />
-            )}
           </div>
-        ))}
+
+          {/* Ряд 1, кол 2: карусель */}
+          <div className="relative w-full aspect-square overflow-hidden rounded-2xl order-2 lg:order-none">
+            {carouselImages.map((src, idx) => (
+              <img
+                key={idx}
+                src={src}
+                alt="История матчи"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
+                  idx === activeIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Ряд 2, кол 1: выплывающая картинка с отступом справа */}
+          <div className="lg:pr-10 order-4 lg:order-none">
+            <ScrollAnimateImage src={matchaProductsImg} alt="Матча продукты" direction="left" />
+          </div>
+
+          {/* Ряд 2, кол 2: второй текстовый блок */}
+          <div className="flex items-center order-3 lg:order-none">
+            <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
+              {blocks[1].text}
+            </p>
+          </div>
+
+          {/* Ряд 3: третий текстовый блок на обе колонки */}
+          <div className="lg:col-span-2 order-5 lg:order-none">
+            <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
+              {blocks[2].text}
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )
