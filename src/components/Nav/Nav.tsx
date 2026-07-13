@@ -15,7 +15,7 @@ export default function Nav() {
         <a
           href="#hero"
           className={`text-[2rem] md:text-5xl font-bold tracking-tight hover-transition hover:text-[var(--green-main)] ${
-            isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--white-main)]'
+            isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--cream-main)]'
           }`}
         >
           SULU
@@ -26,7 +26,7 @@ export default function Nav() {
               <a
                 href={item.href}
                 className={`text-lg font-medium 2xl:text-2xl hover-transition hover:text-[var(--green-main)] ${
-                  isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--white-main)]'
+                  isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--cream-main)]'
                 }`}
               >
                 {item.label}
@@ -42,17 +42,17 @@ export default function Nav() {
         >
           <span
             className={`block w-6 h-0.5 hover-transition hover:bg-[var(--green-main)]  ${
-              isScrolled ? 'bg-[var(--yellow-main)]' : 'bg-[var(--white-main)]'
+              isScrolled ? 'bg-[var(--yellow-main)]' : 'bg-[var(--cream-main)]'
             } ${menuOpen ? 'translate-y-[7px] rotate-45' : ''}`}
           />
           <span
             className={`block w-6 h-0.5 hover-transition ${
-              isScrolled ? 'bg-[var(--yellow-main)]' : 'bg-[var(--white-main)]'
+              isScrolled ? 'bg-[var(--yellow-main)]' : 'bg-[var(--cream-main)]'
             } ${menuOpen ? 'opacity-0' : ''}`}
           />
           <span
             className={`block w-6 h-0.5 hover-transition ${
-              isScrolled ? 'bg-[var(--yellow-main)]' : 'bg-[var(--white-main)]'
+              isScrolled ? 'bg-[var(--yellow-main)]' : 'bg-[var(--cream-main)]'
             } ${menuOpen ? '-translate-y-[7px] -rotate-45' : ''}`}
           />
         </button>
@@ -68,8 +68,8 @@ export default function Nav() {
               <a
                 href={item.href}
                 className={`block px-6 py-2 text-base font-semibold ${
-                  isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--green-main)]'
-                } hover:bg-[var(--white-main)] hover-transition`}
+                  isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--cream-main)]'
+                } hover:bg-[var(--cream-main)] hover-transition`}
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}

@@ -9,10 +9,10 @@ export default function Hero() {
 
         <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start justify-center text-center md:text-left w-full max-w-7xl pt-16 md:pt-0">
           <div className="flex flex-col 2xl:mr-10 items-center max-w-xl h1-margin">
-            <h1 className="text-[clamp(72px,calc(11.56462585vw+30.367347px),208px)] font-bold text-[var(--white-main)] leading-none tracking-tight">
+            <h1 className="text-[clamp(72px,calc(11.56462585vw+30.367347px),208px)] font-bold text-[var(--cream-main)] leading-none tracking-tight">
               SULU
             </h1>
-            <p className="text-[clamp(18px,calc(1.7741935vw+11.6139034px),40px)] text-[var(--white-main)] font-light leading-relaxed">
+            <p className="text-[clamp(18px,calc(1.7741935vw+11.6139034px),40px)] text-[var(--cream-main)] font-light leading-relaxed">
               та самая матча
             </p>
             <a

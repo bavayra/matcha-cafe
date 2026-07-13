@@ -27,10 +27,10 @@ export default function DrinkCard({ drink, isActive }: Props) {
 
       <div className="p-4 2xl:p-6 flex flex-col gap-3">
         <div>
-          <h3 className="drink-title font-light text-[var(--white-main)] leading-tight">
+          <h3 className="drink-title font-light text-[var(--cream-main)] leading-tight">
             {drink.name}
           </h3>
-          <p className="text-[var(--white-main)] font-light drink-details tracking-wider mt-0.5">
+          <p className="text-[var(--cream-main)] font-light drink-details tracking-wider mt-0.5">
             {drink.price} ₸
           </p>
 
@@ -48,17 +48,17 @@ export default function DrinkCard({ drink, isActive }: Props) {
             <div className="flex items-center justify-center my-2 gap-4">
               <button
                 onClick={() => setQuantity(q => Math.max(1, q - 1))}
-                className="w-9 h-9 rounded-full border-2 border-[var(--white-main)] text-[var(--white-main)] flex items-center justify-center text-lg font-bold hover:bg-matcha-50 active:bg-matcha-100 transition-colors select-none"
+                className="w-9 h-9 rounded-full border-2 border-[var(--cream-main)] text-[var(--cream-main)] flex items-center justify-center text-lg font-bold hover:bg-matcha-50 active:bg-matcha-100 transition-colors select-none"
                 aria-label="Уменьшить количество"
               >
                 −
               </button>
-              <span className="w-8 text-center drink-details font-medium text-[var(--white-main)] tabular-nums">
+              <span className="w-8 text-center drink-details font-medium text-[var(--cream-main)] tabular-nums">
                 {quantity}
               </span>
               <button
                 onClick={() => setQuantity(q => q + 1)}
-                className="w-9 h-9 rounded-full border-2 border-[var(--white-main)] text-[var(--white-main)] flex items-center justify-center text-lg font-bold hover:bg-matcha-50 active:bg-matcha-100 transition-colors select-none"
+                className="w-9 h-9 rounded-full border-2 border-[var(--cream-main)] text-[var(--cream-main)] flex items-center justify-center text-lg font-bold hover:bg-matcha-50 active:bg-matcha-100 transition-colors select-none"
                 aria-label="Увеличить количество"
               >
                 +

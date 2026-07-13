@@ -27,7 +27,7 @@ const blocks = [
 
 export default function About() {
   return (
-    <section id="about" className="py-16 bg-[var(--green-main)]">
+    <section id="about" className="py-16 bg-[var(--cream-main)]">
       <div className="max-w-lg mx-auto px-6 flex flex-col gap-8 text-[var(--yellow-text)]">
         <h2 className="section-title font-bold text-[var(--yellow-main)] text-center">МЫ</h2>
 
