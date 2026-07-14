@@ -28,13 +28,13 @@ const blocks = [
 export default function About() {
   return (
     <section id="about" className="py-16 bg-[var(--cream-main)]">
-      <div className="max-w-lg mx-auto px-6 flex flex-col gap-8 text-[var(--yellow-text)]">
-        <h2 className="section-title font-bold text-[var(--yellow-main)] text-center">МЫ</h2>
+      <div className="max-w-lg mx-auto px-6 flex flex-col gap-8 text-[var(--green-text)]">
+        <h2 className="section-title text-[var(--green-main)]">МЫ</h2>
 
         {/* Block 1 */}
         <div>
           <h3 className="hidden mb-3">{blocks[0].title}</h3>
-          <p className="font-light leading-relaxed">{blocks[0].text}</p>
+          <p className="typography-body">{blocks[0].text}</p>
         </div>
 
         {/* Photo between 1 and 2 */}
@@ -47,7 +47,7 @@ export default function About() {
         {/* Block 2 */}
         <div>
           <h3 className="h3-title">{blocks[1].title}</h3>
-          <p className=" font-light leading-relaxed">{blocks[1].text}</p>
+          <p className="typography-body">{blocks[1].text}</p>
         </div>
 
         {/* Photo between 2 and 3 */}
@@ -60,19 +60,19 @@ export default function About() {
         {/* Block 4 */}
         <div>
           <h3 className="h3-title">{blocks[3].title}</h3>
-          <p className=" font-light leading-relaxed">{blocks[3].text}</p>
+          <p className="typography-body">{blocks[3].text}</p>
         </div>
 
         <div>
           <h3 className="h3-title">{blocks[4].title}</h3>
-          <p className=" font-light leading-relaxed">{blocks[4].text}</p>
+          <p className="typography-body">{blocks[4].text}</p>
         </div>
 
         <div>
           <h3 className="h3-title">{blocks[2].title}</h3>
           <div className="flex items-center gap-4">
             <img src={halalImg} alt="Halal сертификат" className="w-16 h-16 object-contain" />
-            <p className="text-matcha-600 font-light text-sm leading-relaxed">
+            <p className="typography-body text-matcha-600">
               Все наши напитки сертифицированы халяль и подходят для вегетарианцев.
             </p>
           </div>

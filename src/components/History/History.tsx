@@ -34,15 +34,11 @@ export default function History() {
   return (
     <section id="history" className="py-16 bg-[var(--green-main)] md:py-24">
       <div className="max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto px-6 2xl:max-w-6xl">
-        <h2 className="section-title font-bold text-center text-[var(--yellow-main)] mb-8 xl:mb-16">
-          МАТЧА?
-        </h2>
+        <h2 className="section-title text-[var(--yellow-main)] mb-8 xl:mb-16">МАТЧА?</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 md:gap-y-10  lg:gap-y-20 xl:gap-x-20">
           <div className="flex items-center order-1 lg:order-none">
-            <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
-              {blocks[0].text}
-            </p>
+            <p className="typography-body text-[var(--yellow-text)]">{blocks[0].text}</p>
           </div>
           <div className="relative w-full history-carousel-img mx-auto aspect-square overflow-hidden order-2 lg:order-none rounded-2xl ">
             {carouselImages.map((src, idx) => (
@@ -65,15 +61,11 @@ export default function History() {
             />
           </div>
           <div className="flex items-center order-3 lg:order-none">
-            <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
-              {blocks[1].text}
-            </p>
+            <p className="text-[var(--yellow-text)] typography-body">{blocks[1].text}</p>
           </div>
 
           <div className="lg:col-span-2 order-5 lg:order-none">
-            <p className="font-light text-center md:text-left leading-relaxed text-[var(--yellow-text)] history-font-size">
-              {blocks[2].text}
-            </p>
+            <p className="text-[var(--yellow-text)] typography-body">{blocks[2].text}</p>
           </div>
         </div>
       </div>

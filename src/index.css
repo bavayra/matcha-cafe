@@ -53,6 +53,7 @@
   --cream-main: #f5f5dc;
 
   --yellow-text: #bdca7a;
+  --green-text: #0b663d;
 
   /* Matcha colors */
 
@@ -90,6 +91,13 @@
   --color-coconut-accent: #c2a25c;
   --color-coconut-title: #69552e;
   --color-coconut-hover: #a88f48;
+
+  .typography-body {
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: var(--body-font-size);
+    text-align: center;
+  }
 
   .card-width {
     max-width: 360px;
@@ -162,6 +170,8 @@
     }
     .section-title {
       font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
     }
     .drink-title {
       font-size: 1.725rem;
@@ -169,7 +179,7 @@
     .drink-details {
       font-size: 1.25rem;
     }
-    .history-font-size {
+    .body-font-size {
       font-size: 1.125rem;
     }
     .h3-title {
@@ -220,12 +230,14 @@
     .drink-details {
       font-size: 1.5rem;
     }
-    .history-font-size {
+    .body-font-size {
       font-size: 1.375rem;
     }
-
     .history-carousel-img {
       width: 45vw;
+    }
+    .typography-body {
+      text-align: left;
     }
   }
 }
