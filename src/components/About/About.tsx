@@ -29,23 +29,22 @@ const blocks = [
 export default function About() {
   return (
     <section id="about" className="py-16 bg-[var(--cream-main)]">
-      <div className="max-w-lg mx-auto px-6 flex flex-col gap-8 text-[var(--green-text)]">
+      <div className="max-w-lg mx-auto md:max-w-2xl px-6 flex flex-col gap-8 text-[var(--green-text)]">
         <h2 className="section-title text-[var(--green-main)]">МЫ</h2>
 
         {/* Block 1 */}
-        <div>
-          <h3 className="hidden mb-3">{blocks[0].title}</h3>
-          <p className="typography-body">{blocks[0].text}</p>
+        <div className="grid grid-cols-2 justify-center items-center gap-6 mb-4">
+          <div>
+            <h3 className="hidden mb-3">{blocks[0].title}</h3>
+            <p className="typography-body">{blocks[0].text}</p>
+          </div>
+          <ScrollAnimateImage
+            src={foundersImg}
+            alt="Матча продукты"
+            direction="right"
+            className="founders-img"
+          />
         </div>
-
-        {/* Photo between 1 and 2 */}
-
-        <ScrollAnimateImage
-          src={foundersImg}
-          alt="Матча продукты"
-          direction="right"
-          className="lg:max-w-[35vw]"
-        />
         {/* Block 2 */}
         <div>
           <h3 className="h3-title">{blocks[1].title}</h3>
