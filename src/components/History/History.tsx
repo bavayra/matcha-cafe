@@ -32,9 +32,9 @@ export default function History() {
   }, [])
 
   return (
-    <section id="history" className="py-16 bg-[var(--green-main)]">
+    <section id="history" className="py-16 bg-[var(--green-main)] md:py-24">
       <div className="max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto px-6 2xl:max-w-6xl">
-        <h2 className="section-title font-bold text-center text-[var(--yellow-main)] mb-8">
+        <h2 className="section-title font-bold text-center text-[var(--yellow-main)] mb-8 xl:mb-16">
           МАТЧА?
         </h2>
 
@@ -61,7 +61,7 @@ export default function History() {
               src={matchaProductsImg}
               alt="Матча продукты"
               direction="left"
-              className="lg:max-w-[35vw] mx-auto"
+              className="lg:max-w-[35vw]"
             />
           </div>
           <div className="flex items-center order-3 lg:order-none">
