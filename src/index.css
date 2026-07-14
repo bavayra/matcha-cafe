@@ -260,6 +260,9 @@
     .history-carousel-img {
       width: 30vw;
     }
+    .founders-img {
+      max-width: 36vw;
+    }
   }
 }
 
