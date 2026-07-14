@@ -194,6 +194,10 @@
       max-width: 70vw;
       margin-inline: auto;
     }
+    .halal-img {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 }
 
@@ -270,6 +274,13 @@
   :root {
     .history-carousel-img {
       width: 24vw;
+    }
+    .founders-img {
+      max-width: 26vw;
+    }
+    .halal-img {
+      width: 5rem;
+      height: 5rem;
     }
   }
 }

@@ -55,7 +55,7 @@ export default function About() {
           src={matchaSpotImg}
           alt="Интерьер кафе Sulu"
           direction="left"
-          className="md:max-w-[60vw] mx-auto lg:max-w-[60vw]"
+          className="md:max-w-[60vw] mx-auto"
         />
 
         {/* Block 3 */}
@@ -72,7 +72,7 @@ export default function About() {
         <div>
           <h3 className="h3-title">{blocks[2].title}</h3>
           <div className="flex items-center gap-4 bg-[var(--green-text)] rounded-xl p-4">
-            <img src={halalImg} alt="Halal сертификат" className="w-16 h-16 object-contain" />
+            <img src={halalImg} alt="Halal сертификат" className="halal-img object-contain" />
             <p className="typography-body text-[var(--yellow-text)]">
               Все наши напитки сертифицированы халяль и подходят для вегетарианцев.
             </p>
