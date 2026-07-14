@@ -33,14 +33,14 @@ export default function About() {
         <h2 className="section-title text-[var(--green-main)]">МЫ</h2>
 
         {/* Block 1 */}
-        <div className="grid grid-cols-2 justify-center items-center gap-6 mb-4">
+        <div className="grid grid-column md:grid-cols-2 justify-center items-center gap-6 mb-4">
           <div>
             <h3 className="hidden mb-3">{blocks[0].title}</h3>
             <p className="typography-body">{blocks[0].text}</p>
           </div>
           <ScrollAnimateImage
             src={foundersImg}
-            alt="Матча продукты"
+            alt="Основатели Sulu"
             direction="right"
             className="founders-img"
           />
@@ -54,9 +54,9 @@ export default function About() {
         {/* Photo between 2 and 3 */}
         <ScrollAnimateImage
           src={matchaSpotImg}
-          alt="Матча продукты"
+          alt="Интерьер кафе Sulu"
           direction="left"
-          className="lg:max-w-[35vw]"
+          className="md:max-w-[60vw] mx-auto lg:max-w-[35vw]"
         />
         {/* Block 4 */}
         <div>
