@@ -1,6 +1,7 @@
 import foundersImg from '../../../images/photos/founders.webp'
 import matchaSpotImg from '../../../images/photos/matcha-spot.webp'
 import halalImg from '../../../images/photos/halal-logo.webp'
+import ScrollAnimateImage from '../ScrollAnimateImage'
 
 const blocks = [
   {
@@ -12,7 +13,7 @@ const blocks = [
     text: 'Sulu – это не просто красивое слово. Наше имя можно прочитать как «изящный, утончённый» – таким мы видим мир матчи: аккуратные движения, чистый вкус, внимание к деталям и уважение к моменту «здесь и сейчас».',
   },
   {
-    title: 'Сертификаты',
+    title: 'СЕРТИФИКАТЫ',
     text: null, // rendered separately with logo
   },
   {
@@ -38,12 +39,13 @@ export default function About() {
         </div>
 
         {/* Photo between 1 and 2 */}
-        <img
-          src={foundersImg}
-          alt="Основатели"
-          className="rounded-2xl w-full object-cover aspect-video"
-        />
 
+        <ScrollAnimateImage
+          src={foundersImg}
+          alt="Матча продукты"
+          direction="right"
+          className="lg:max-w-[35vw]"
+        />
         {/* Block 2 */}
         <div>
           <h3 className="h3-title">{blocks[1].title}</h3>
@@ -51,12 +53,12 @@ export default function About() {
         </div>
 
         {/* Photo between 2 and 3 */}
-        <img
+        <ScrollAnimateImage
           src={matchaSpotImg}
-          alt="Наш зал"
-          className="rounded-2xl w-full object-cover aspect-video"
+          alt="Матча продукты"
+          direction="left"
+          className="lg:max-w-[35vw]"
         />
-
         {/* Block 4 */}
         <div>
           <h3 className="h3-title">{blocks[3].title}</h3>
@@ -70,9 +72,9 @@ export default function About() {
 
         <div>
           <h3 className="h3-title">{blocks[2].title}</h3>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 bg-[var(--green-text)] rounded-xl p-4">
             <img src={halalImg} alt="Halal сертификат" className="w-16 h-16 object-contain" />
-            <p className="typography-body text-matcha-600">
+            <p className="typography-body text-[var(--yellow-text)]">
               Все наши напитки сертифицированы халяль и подходят для вегетарианцев.
             </p>
           </div>
