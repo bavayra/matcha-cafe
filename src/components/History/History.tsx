@@ -33,7 +33,7 @@ export default function History() {
 
   return (
     <section id="history" className="py-16 bg-[var(--green-main)] md:py-24">
-      <div className="max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto px-6 2xl:max-w-6xl">
+      <div className="section-width mx-auto px-6">
         <h2 className="section-title text-[var(--yellow-main)] mb-8 xl:mb-16">МАТЧА?</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 md:gap-y-10  lg:gap-y-20 xl:gap-x-20">

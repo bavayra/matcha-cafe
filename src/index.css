@@ -198,6 +198,9 @@
       width: 4rem;
       height: 4rem;
     }
+    .section-width {
+      max-width: 32rem;
+    }
   }
 }
 
@@ -253,6 +256,9 @@
     .h3-title {
       font-size: 2.25rem;
     }
+    .section-width {
+      max-width: 42rem;
+    }
   }
 }
 
@@ -266,6 +272,9 @@
     }
     .founders-img {
       max-width: 36vw;
+    }
+    .section-width {
+      max-width: 56rem;
     }
   }
 }
