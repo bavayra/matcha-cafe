@@ -54,6 +54,7 @@ export default function History() {
           </div>
           <div className="lg:pr-10 order-4 lg:order-none">
             <ScrollAnimateImage
+              id="matcha-products"
               src={matchaProductsImg}
               alt="Матча продукты"
               direction="left"

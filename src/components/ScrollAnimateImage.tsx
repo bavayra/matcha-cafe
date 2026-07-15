@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 interface ScrollAnimateImageProps {
+  id?: string
   src: string
   alt: string
   direction: 'left' | 'right'
@@ -8,6 +9,7 @@ interface ScrollAnimateImageProps {
 }
 
 export default function ScrollAnimateImage({
+  id,
   src,
   alt,
   direction,
@@ -34,7 +36,7 @@ export default function ScrollAnimateImage({
   const hiddenTranslateClass = direction === 'right' ? 'translate-x-[50vw]' : '-translate-x-[50vw]'
 
   return (
-    <div ref={ref} className={`w-full flex justify-center ${className || ''}`}>
+    <div id={id} ref={ref} className={`w-full flex justify-center ${className || ''}`}>
       <div
         className={`
           w-full max-w-2xl px-4 md:max-w-md xl:max-w-2xl
