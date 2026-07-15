@@ -86,7 +86,7 @@ export default function Contacts() {
 
         <div className="flex flex-col gap-10 ">
           {/* Locations */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 2xl:gap-6">
             <h3 className="hidden">Местоположения наших кафе</h3>
             {locations.map((loc, i) => (
               <address

@@ -395,5 +395,8 @@
     .about-text-gap-x {
       column-gap: 10rem;
     }
+    footer ul li a {
+      font-size: 1.25rem;
+    }
   }
 }
