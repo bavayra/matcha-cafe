@@ -316,6 +316,13 @@
     .about-text-gap-x {
       column-gap: 6rem;
     }
+    #contacts a {
+      font-size: 1.75rem;
+      padding: 1rem 1.75rem;
+    }
+    #contacts h3 {
+      font-size: 2.5rem;
+    }
   }
 }
 
