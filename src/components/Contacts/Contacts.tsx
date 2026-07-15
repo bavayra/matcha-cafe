@@ -1,5 +1,3 @@
-import mapImg from '../../../images/photos/map.webp'
-
 const locations = [
   {
     city: 'Алматы',
@@ -80,21 +78,13 @@ export default function Contacts() {
       <div className="section-width  mx-auto px-6">
         <h2 className="section-title text-[var(--yellow-main)] mb-6">СВЯЗЬ</h2>
         <div className="flex flex-col mb-10">
-          <h3 className="text-xl text-center text-[var(--yellow-main)]">ПРИХОДИ К НАМ</h3>
-          <p className="text-center text-[var(--cream-main)]">
+          <h3 className="text-[var(--yellow-main)]">ПРИХОДИ К НАМ</h3>
+          <p className="text-center text-xl text-[var(--cream-main)]">
             мы есть во всех крупных городах Казахстана
           </p>
         </div>
 
         <div className="flex flex-col gap-10">
-          <div className="rounded-2xl overflow-hidden">
-            <img
-              src={mapImg}
-              alt="Карта расположения"
-              className="w-full object-cover aspect-video"
-            />
-          </div>
-
           {/* Locations */}
           <div className="flex flex-col gap-4 ">
             <h3 className="hidden">Местоположения наших кафе</h3>
@@ -112,9 +102,7 @@ export default function Contacts() {
 
           {/* Socials */}
           <div>
-            <h3 className="text-3xl text-center text-[var(--green-main)] font-semibold mb-8">
-              НАПИШИ НАМ
-            </h3>
+            <h3 className="text-[var(--green-main)]">НАПИШИ НАМ</h3>
             <div className="flex flex-wrap gap-3 justify-center">
               {socials.map(s => (
                 <a

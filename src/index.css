@@ -201,6 +201,12 @@
     .section-width {
       max-width: 32rem;
     }
+    #contacts h3 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
   }
 }
 
@@ -231,6 +237,9 @@
     }
     .section-width {
       max-width: 84vw;
+    }
+    #contacts h3 {
+      font-size: 2rem;
     }
   }
 }
