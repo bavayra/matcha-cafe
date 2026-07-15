@@ -1,21 +1,21 @@
 const locations = [
   {
-    city: 'Алматы',
+    city: 'АЛМАТА',
     address: 'ул. Байсеитовой, 32',
     hours: '06:00 – 21:00',
   },
   {
-    city: 'Астана',
+    city: 'АСТАНА',
     address: 'ул. Динмухамеда Кунаева, 12/1',
     hours: '06:00 – 20:00',
   },
   {
-    city: 'Шымкент',
+    city: 'ШЫМКЕНТ',
     address: 'ул. Гани Иляева, 3',
     hours: '07:00 – 20:00',
   },
   {
-    city: 'Актобе',
+    city: 'АКТОБЕ',
     address: 'пр. Абилкайыр Хана, 67',
     hours: '07:00 – 20:00',
   },
@@ -110,7 +110,7 @@ export default function Contacts() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2.5 bg-matcha-700/60 rounded-xl text-sm font-medium hover:bg-matcha-600 active:bg-matcha-800 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2.5 bg-matcha-700/60 rounded-xl text-sm font-light hover:bg-matcha-600 active:bg-matcha-800 transition-colors"
                 >
                   {s.icon}
                   {s.name}
