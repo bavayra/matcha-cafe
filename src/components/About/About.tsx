@@ -59,13 +59,15 @@ export default function About() {
         />
 
         {/* Block 3 */}
-        <div>
-          <h3 className="h3-title">{blocks[3].title}</h3>
-          <p className="typography-body">{blocks[3].text}</p>
-        </div>
-        <div>
-          <h3 className="h3-title">{blocks[4].title}</h3>
-          <p className="typography-body">{blocks[4].text}</p>
+        <div className="grid grid-cols-1 gap-y-16 2xl:grid-cols-2 2xl:gap-x-10">
+          <div>
+            <h3 className="h3-title">{blocks[3].title}</h3>
+            <p className="typography-body">{blocks[3].text}</p>
+          </div>
+          <div>
+            <h3 className="h3-title">{blocks[4].title}</h3>
+            <p className="typography-body">{blocks[4].text}</p>
+          </div>
         </div>
 
         {/* Block 4 */}

@@ -332,6 +332,9 @@
     .section-title {
       font-size: 7rem;
     }
+    .section-width {
+      max-width: 92rem;
+    }
     .drink-details {
       font-size: 1.75rem;
     }
