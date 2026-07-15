@@ -331,6 +331,9 @@
     .history-carousel-img {
       width: 16vw;
     }
+    #contacts address p {
+      font-size: 1.5rem;
+    }
   }
 }
 /*можно удалить, если один бркп*/

@@ -75,11 +75,11 @@ export default function Contacts() {
       id="contacts"
       className="py-16 bg-gradient-to-b from-[var(--green-main)] to-[var(--yellow-main)] text-cream-100"
     >
-      <div className="section-width  mx-auto px-6">
+      <div className="section-width mx-auto px-6 2xl:mb-16">
         <h2 className="section-title text-[var(--yellow-main)] mb-6">СВЯЗЬ</h2>
         <div className="flex flex-col mb-10">
           <h3 className="text-[var(--yellow-main)]">ПРИХОДИ К НАМ</h3>
-          <p className="text-center text-xl text-[var(--cream-main)]">
+          <p className="text-center text-xl 2xl:text-3xl text-[var(--cream-main)]">
             мы есть во всех крупных городах Казахстана
           </p>
         </div>
