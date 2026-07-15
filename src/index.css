@@ -229,6 +229,9 @@
     .section-title {
       font-size: 3.5rem;
     }
+    .section-width {
+      max-width: 84vw;
+    }
   }
 }
 
@@ -256,9 +259,6 @@
     .h3-title {
       font-size: 2.25rem;
     }
-    .section-width {
-      max-width: 42rem;
-    }
   }
 }
 
@@ -272,9 +272,6 @@
     }
     .founders-img {
       max-width: 36vw;
-    }
-    .section-width {
-      max-width: 56rem;
     }
   }
 }
@@ -290,6 +287,9 @@
     .halal-img {
       width: 5rem;
       height: 5rem;
+    }
+    .section-width {
+      max-width: 70vw;
     }
   }
 }
