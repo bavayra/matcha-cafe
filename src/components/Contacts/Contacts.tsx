@@ -84,9 +84,9 @@ export default function Contacts() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 ">
           {/* Locations */}
-          <div className="flex flex-col gap-4 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <h3 className="hidden">Местоположения наших кафе</h3>
             {locations.map((loc, i) => (
               <address
@@ -103,7 +103,7 @@ export default function Contacts() {
           {/* Socials */}
           <div>
             <h3 className="text-[var(--green-main)]">НАПИШИ НАМ</h3>
-            <div className="flex flex-wrap gap-3 justify-center">
+            <div className="flex flex-wrap gap-3 justify-center md:mt-8">
               {socials.map(s => (
                 <a
                   key={s.name}
