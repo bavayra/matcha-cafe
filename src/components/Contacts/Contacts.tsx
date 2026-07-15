@@ -69,59 +69,66 @@ const socials = [
       </svg>
     ),
   },
-  {
-    name: 'Threads',
-    href: 'https://threads.net',
-    icon: (
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden>
-        <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 011.228.017c-.126-.465-.272-.87-.438-1.21-.441-.901-1.198-1.372-2.252-1.402-.823.023-1.58.307-2.201.822l-1.25-1.597c.91-.72 2.032-1.131 3.274-1.158h.074c1.794.05 3.132.81 3.875 2.202.43.815.703 1.836.835 3.108.327.134.637.288.924.46 1.218.727 2.072 1.748 2.469 2.648.826 1.865.87 4.96-1.37 7.16-1.773 1.737-3.95 2.59-6.918 2.61zm.176-8.973a13.853 13.853 0 00-1.015-.05c-.876.05-1.6.29-2.1.69-.44.36-.664.828-.632 1.378.03.54.285.985.74 1.277.567.369 1.357.539 2.188.494 1.012-.055 1.812-.47 2.38-1.232.455-.606.72-1.43.79-2.459a10.516 10.516 0 00-1.35-.098z" />
-      </svg>
-    ),
-  },
 ]
 
 export default function Contacts() {
   return (
     <section
       id="contacts"
-      className="py-16 bg-gradient-to-b from-[var(--yellow-main)] to-[var(--green-main)]   text-cream-100"
+      className="py-16 bg-gradient-to-b from-[var(--green-main)] to-[var(--yellow-main)] text-cream-100"
     >
-      <div className="section-width  mx-auto px-6 flex flex-col gap-10">
-        <h2 className="section-title">СВЯЗЬ</h2>
-
-        {/* Map */}
-        <div className="rounded-2xl overflow-hidden">
-          <img src={mapImg} alt="Карта расположения" className="w-full object-cover aspect-video" />
+      <div className="section-width  mx-auto px-6">
+        <h2 className="section-title text-[var(--yellow-main)] mb-6">СВЯЗЬ</h2>
+        <div className="flex flex-col mb-10">
+          <h3 className="text-xl text-center text-[var(--yellow-main)]">ПРИХОДИ К НАМ</h3>
+          <p className="text-center text-[var(--cream-main)]">
+            мы есть во всех крупных городах Казахстана
+          </p>
         </div>
 
-        {/* Locations */}
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-medium">Наши точки</h3>
-          {locations.map((loc, i) => (
-            <address key={i} className="not-italic bg-matcha-800/60 rounded-xl p-4">
-              <p className="font-medium">{loc.city}</p>
-              <p className="text-cream-200 font-light text-sm mt-0.5">{loc.address}</p>
-              <p className="text-matcha-300 text-sm mt-1">{loc.hours}</p>
-            </address>
-          ))}
-        </div>
+        <div className="flex flex-col gap-10">
+          <div className="rounded-2xl overflow-hidden">
+            <img
+              src={mapImg}
+              alt="Карта расположения"
+              className="w-full object-cover aspect-video"
+            />
+          </div>
 
-        {/* Socials */}
-        <div>
-          <h3 className="text-xl font-medium mb-4">Социальные сети</h3>
-          <div className="flex flex-wrap gap-3">
-            {socials.map(s => (
-              <a
-                key={s.name}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2.5 bg-matcha-700/60 rounded-xl text-sm font-medium hover:bg-matcha-600 active:bg-matcha-800 transition-colors"
+          {/* Locations */}
+          <div className="flex flex-col gap-4 ">
+            <h3 className="hidden">Местоположения наших кафе</h3>
+            {locations.map((loc, i) => (
+              <address
+                key={i}
+                className="not-italic bg-matcha-800/60 rounded-xl p-4 hover:scale-105 hover-transition"
               >
-                {s.icon}
-                {s.name}
-              </a>
+                <p className="font-medium">{loc.city}</p>
+                <p className="text-[var(--cream-main)] font-light text-sm mt-0.5">{loc.address}</p>
+                <p className="text-[var(--yellow-main)] text-sm mt-1">{loc.hours}</p>
+              </address>
             ))}
+          </div>
+
+          {/* Socials */}
+          <div>
+            <h3 className="text-3xl text-center text-[var(--green-main)] font-semibold mb-8">
+              НАПИШИ НАМ
+            </h3>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {socials.map(s => (
+                <a
+                  key={s.name}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 bg-matcha-700/60 rounded-xl text-sm font-medium hover:bg-matcha-600 active:bg-matcha-800 transition-colors"
+                >
+                  {s.icon}
+                  {s.name}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
