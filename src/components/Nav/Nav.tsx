@@ -60,7 +60,7 @@ export default function Nav() {
       <div
         className={`md:hidden overflow-hidden hover-transition ${
           menuOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'
-        } bg-cream-100/98 backdrop-blur-sm border-t border-cream-200`}
+        } bg-cream-100/98 backdrop-blur-sm border-t border-[var(--cream-main)]`}
       >
         <ul className="flex flex-col py-2">
           {navItems.map(item => (
