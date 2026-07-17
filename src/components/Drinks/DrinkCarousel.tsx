@@ -25,7 +25,6 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
   const prev = useCallback(() => goTo(active - 1), [active, goTo])
   const next = useCallback(() => goTo(active + 1), [active, goTo])
 
-  /* ── Pointer events for swipe ── */
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     dragStartX.current = e.clientX
     hasDragged.current = false
@@ -54,7 +53,6 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
 
   return (
     <div className="flex flex-col items-center gap-6 select-none">
-      {/* ── Track ── */}
       <div
         className="relative w-[70vw] overflow-visible max-w-[360px] md:w-[300px] md:my-8 2xl:my-14"
         style={{ height: 'min(calc(80vw + 210px), 580px)', touchAction: 'pan-y' }}
@@ -92,7 +90,6 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
         })}
       </div>
 
-      {/* ── Dots ── */}
       <div
         className="flex items-center gap-2 dots-top"
         role="tablist"

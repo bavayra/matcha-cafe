@@ -13,8 +13,9 @@ export default function Nav() {
     >
       <nav className="w-full max-w-[100vw] mx-4 px-8 py-4 md:p-10 h-14 flex items-center justify-between">
         <a
+          id="logo"
           href="#hero"
-          className={`text-[2rem] md:text-5xl font-bold tracking-tight hover-transition hover:text-[var(--green-main)] ${
+          className={`logo font-bold tracking-tight hover-transition hover:text-[var(--green-main)] ${
             isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--green-main)]'
           }`}
         >
@@ -41,17 +42,17 @@ export default function Nav() {
           aria-expanded={menuOpen}
         >
           <span
-            className={`block w-6 h-0.5 hover-transition hover:bg-[var(--green-main)]  ${
+            className={`humb-icon block hover-transition hover:bg-[var(--green-main)]  ${
               isScrolled ? 'bg-[var(--yellow-main)]' : 'bg-[var(--green-main)]'
             } ${menuOpen ? 'translate-y-[7px] rotate-45' : ''}`}
           />
           <span
-            className={`block w-6 h-0.5 hover-transition ${
+            className={`humb-icon block hover-transition ${
               isScrolled ? 'bg-[var(--yellow-main)]' : 'bg-[var(--green-main)]'
             } ${menuOpen ? 'opacity-0' : ''}`}
           />
           <span
-            className={`block w-6 h-0.5 hover-transition ${
+            className={`humb-icon block hover-transition ${
               isScrolled ? 'bg-[var(--yellow-main)]' : 'bg-[var(--green-main)]'
             } ${menuOpen ? '-translate-y-[7px] -rotate-45' : ''}`}
           />
