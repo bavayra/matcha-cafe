@@ -11,7 +11,7 @@ export default function Nav() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 hover-transition backdrop-blur-sm shadow-sm bg-transparent`}
     >
-      <nav className="w-full max-w-[100vw] mx-4 px-8 py-4 md:p-10 h-14 flex items-center justify-between">
+      <nav className="w-full max-w-[95vw] mx-4 px-8 py-4 md:p-10 h-14 flex items-center justify-between">
         <a
           id="logo"
           href="#hero"
@@ -35,6 +35,8 @@ export default function Nav() {
             </li>
           ))}
         </ul>
+
+        {/*hamburger menu*/}
         <button
           className="md:hidden flex flex-col gap-[5px] p-2 rounded hover-transition hover:text-[var(--green-main)]"
           onClick={() => setMenuOpen(prev => !prev)}
@@ -59,7 +61,7 @@ export default function Nav() {
         </button>
       </nav>
       <div
-        className={`md:hidden overflow-hidden hover-transition ${
+        className={`md:hidden overflow-hidden mx-auto hover-transition ${
           menuOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'
         } bg-[var(--green-main)]/98 backdrop-blur-sm border-t border-[var(--yellow-main)]`}
       >

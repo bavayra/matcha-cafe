@@ -164,6 +164,9 @@
     .hover-transition {
       transition: all 0.3s ease-in-out;
     }
+    .hero-img-size {
+      background-size: clamp(306px, calc(136px + 47.4vw), 500px) auto;
+    }
     .section-title {
       font-size: 2.5rem;
       font-weight: 700;
@@ -284,7 +287,6 @@
     #contacts a {
       font-size: 1.15rem;
     }
-
     #contacts address p {
       font-size: 1.15rem;
       padding-block: 0.25rem;
@@ -292,8 +294,19 @@
   }
 }
 
+@media (min-width: 768px) {
+  :root {
+    .hero-img-size {
+      background-size: 65vw auto;
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   :root {
+    .hero-img-size {
+      background-size: 35vw auto;
+    }
     .section-title {
       font-size: 5rem;
     }
@@ -308,6 +321,9 @@
 
 @media (min-width: 1280px) {
   :root {
+    .hero-img-size {
+      background-size: 28vw auto;
+    }
     .history-carousel-img {
       width: 24vw;
     }
@@ -349,7 +365,6 @@
     }
   }
 }
-/*можно удалить, если один бркп*/
 
 @media (min-width: 2460px) {
   :root {

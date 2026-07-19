@@ -54,7 +54,7 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
   return (
     <div className="flex flex-col items-center gap-6 select-none">
       <div
-        className="relative w-[70vw] overflow-visible max-w-[360px] md:w-[300px] md:my-8 2xl:my-14"
+        className="relative w-full overflow-visible md:my-8 2xl:my-14"
         style={{ height: 'min(calc(80vw + 210px), 580px)', touchAction: 'pan-y' }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
