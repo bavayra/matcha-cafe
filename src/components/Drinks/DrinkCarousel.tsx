@@ -28,7 +28,6 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     dragStartX.current = e.clientX
     hasDragged.current = false
-    e.currentTarget.setPointerCapture(e.pointerId)
   }
 
   const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
@@ -49,6 +48,12 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
 
   const onPointerCancel = () => {
     dragStartX.current = null
+    hasDragged.current = false
+  }
+
+  const onPointerLeave = () => {
+    dragStartX.current = null
+    hasDragged.current = false
   }
 
   return (
@@ -60,6 +65,7 @@ export default function DrinkCarousel({ drinks, active, onActiveChange }: Props)
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
         onPointerCancel={onPointerCancel}
+        onPointerLeave={onPointerLeave}
       >
         {drinks.map((drink, index) => {
           const offset = index - active
