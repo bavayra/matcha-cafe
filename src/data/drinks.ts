@@ -56,7 +56,7 @@ export const drinks: Drink[] = [
   {
     id: 1,
     slug: 'classic',
-    name: 'КЛАССИЧЕСКАЯ МАТЧА',
+    name: 'КЛАССИЧЕСКАЯ',
     price: 1500,
     description: 'Традиционный матча-латте с глубокими нотками умами',
     image: classicImg,
@@ -64,7 +64,7 @@ export const drinks: Drink[] = [
   {
     id: 2,
     slug: 'blueberry',
-    name: 'ЧЕРНИЧНАЯ МАТЧА',
+    name: 'ЧЕРНИЧНАЯ',
     price: 1700,
     description: 'Матча с пюре из свежей черники — цвет и вкус лета',
     image: blueberryImg,
@@ -72,7 +72,7 @@ export const drinks: Drink[] = [
   {
     id: 3,
     slug: 'jasmine',
-    name: 'ЖАСМИНОВАЯ МАТЧА',
+    name: 'ЖАСМИНОВАЯ',
     price: 1850,
     description: 'Деликатный букет с цветочными нотами жасмина — нежно и ароматно',
     image: jasmineImg,
@@ -80,7 +80,7 @@ export const drinks: Drink[] = [
   {
     id: 4,
     slug: 'strawberry',
-    name: 'КЛУБНИЧНАЯ МАТЧА',
+    name: 'КЛУБНИЧНАЯ',
     price: 1850,
     description: 'Яркая матча со свежей клубникой — сладкая, свежая, летняя',
     image: strawberryImg,
@@ -88,7 +88,7 @@ export const drinks: Drink[] = [
   {
     id: 5,
     slug: 'coconut',
-    name: 'КОКОСОВАЯ МАТЧА',
+    name: 'КОКОСОВАЯ',
     price: 2000,
     description: 'Экзотическая матча с ароматом кокоса — сладкая и освежающая',
     image: coconutImg,

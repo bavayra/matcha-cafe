@@ -16,7 +16,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
       }`}
       style={{ background: 'var(--theme-card-bg)' }}
     >
-      <div className="aspect-square relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         <div>
           <img
             src={drink.image}
@@ -30,12 +30,11 @@ export default function DrinkCard({ drink, isActive }: Props) {
         </div>
       </div>
 
-      <div className="p-4 2xl:p-6 flex flex-col gap-3">
+      <div className="py-4 2xl:p-6 flex flex-col gap-3">
         <div>
           <h3 className="drink-title font-light text-[var(--cream-main)] leading-tight">
             {drink.name}
           </h3>
-
           <p
             id="drink-description"
             className="hidden md:block mt-2 drink-details leading-tight tracking-tight"
@@ -46,11 +45,11 @@ export default function DrinkCard({ drink, isActive }: Props) {
         </div>
 
         {isActive && (
-          <>
-            <div className="flex items-center justify-center my-2 gap-4">
+          <div className="grid grid-cols-2">
+            <div className="flex items-center justify-centerx gap-0">
               <button
                 onClick={() => setQuantity(q => Math.max(1, q - 1))}
-                className="w-9 h-9 rounded-full border-2 border-[var(--cream-main)] text-[var(--cream-main)] flex items-center justify-center text-lg font-bold hover:bg-matcha-50 active:bg-matcha-100 transition-colors select-none"
+                className="w-7 h-7 rounded-full border-2 border-[var(--cream-main)] text-[var(--cream-main)] flex items-center justify-center text-lg font-bold hover:bg-matcha-50 active:bg-matcha-100 transition-colors select-none"
                 aria-label="Уменьшить количество"
               >
                 −
@@ -60,7 +59,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
               </span>
               <button
                 onClick={() => setQuantity(q => q + 1)}
-                className="w-9 h-9 rounded-full border-2 border-[var(--cream-main)] text-[var(--cream-main)] flex items-center justify-center text-lg font-bold hover:bg-matcha-50 active:bg-matcha-100 transition-colors select-none"
+                className="w-7 h-7 rounded-full border-2 border-[var(--cream-main)] text-[var(--cream-main)] flex items-center justify-center text-lg font-bold hover:bg-matcha-50 active:bg-matcha-100 transition-colors select-none"
                 aria-label="Увеличить количество"
               >
                 +
@@ -68,12 +67,15 @@ export default function DrinkCard({ drink, isActive }: Props) {
             </div>
 
             <button
-              className="w-full py-3 text-cream-50 font-light rounded-2xl hover:bg-matcha-500 2xl:text-xl active:scale-95 mb-3 active:bg-matcha-700 transition-all text-lg"
+              className="flex flex-col items-center justify-center w-full py-2 text-cream-50 font-light rounded-2xl hover:bg-matcha-500 2xl:text-xl active:scale-95 active:bg-matcha-700 transition-all text-lg"
               style={{ background: 'var(--theme-accent)' }}
             >
-              КУПИТЬ · {(drink.price * quantity).toLocaleString('ru-RU')} ₸
+              <div className="flex gap-2">
+                <span>КУПИТЬ</span>{' '}
+                <span>{(drink.price * quantity).toLocaleString('ru-RU')} ₸ </span>
+              </div>
             </button>
-          </>
+          </div>
         )}
       </div>
     </div>
