@@ -71,7 +71,6 @@ export const drinks: Drink[] = [
     slug: 'classic',
     name: 'КЛАССИЧЕСКАЯ',
     price: 1500,
-    description: 'Традиционный матча-латте с глубокими нотками умами',
     image: classicImg,
     specification: [
       {
@@ -97,7 +96,6 @@ export const drinks: Drink[] = [
     slug: 'blueberry',
     name: 'ЧЕРНИЧНАЯ',
     price: 1700,
-    description: 'Матча с пюре из свежей черники — цвет и вкус лета',
     image: blueberryImg,
     specification: [
       {
@@ -123,7 +121,6 @@ export const drinks: Drink[] = [
     slug: 'jasmine',
     name: 'ЖАСМИНОВАЯ',
     price: 1850,
-    description: 'Деликатный букет с цветочными нотами жасмина — нежно и ароматно',
     image: jasmineImg,
     specification: [
       {
@@ -149,7 +146,6 @@ export const drinks: Drink[] = [
     slug: 'strawberry',
     name: 'КЛУБНИЧНАЯ',
     price: 1850,
-    description: 'Яркая матча со свежей клубникой — сладкая, свежая, летняя',
     image: strawberryImg,
     specification: [
       {
@@ -175,7 +171,6 @@ export const drinks: Drink[] = [
     slug: 'coconut',
     name: 'КОКОСОВАЯ',
     price: 2000,
-    description: 'Экзотическая матча с ароматом кокоса — сладкая и освежающая',
     image: coconutImg,
     specification: [
       {

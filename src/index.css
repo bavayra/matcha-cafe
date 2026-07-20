@@ -184,6 +184,9 @@
     .drink-details {
       font-size: 1.25rem;
     }
+    .cta-font-size {
+      font-size: 1rem;
+    }
     .body-font-size {
       font-size: 1.125rem;
     }
@@ -263,10 +266,13 @@
       font-size: 2.5rem;
     }
     .drink-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     .drink-details {
       font-size: 1.5rem;
+    }
+    .cta-font-size {
+      font-size: 1.25rem;
     }
     .body-font-size {
       font-size: 1.375rem;
