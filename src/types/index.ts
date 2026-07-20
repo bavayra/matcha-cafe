@@ -5,6 +5,10 @@ export interface Drink {
   price: number
   description: string
   image: string
+  specification?: {
+    specificationIcon: string
+    specificationText: string
+  }[]
 }
 
 export interface NavItem {

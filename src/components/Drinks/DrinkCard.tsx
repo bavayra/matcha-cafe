@@ -24,7 +24,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
             className="w-full h-full object-cover rounded-xl"
             draggable={false}
           />
-          <p className="text-[var(--cream-main)] bg-[var(--theme-card-bg)] absolute top-0 right-0 px-3 py-1 rounded-bl-xl font-light drink-details tracking-wider">
+          <p className="text-[var(--theme-title)] bg-[var(--theme-card-bg)] absolute top-0 right-0 px-3 py-1 rounded-bl-xl font-bold drink-details tracking-wider">
             {drink.price} ₸
           </p>
         </div>
@@ -32,7 +32,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
 
       <div className="py-4 2xl:p-6 flex flex-col gap-3">
         <div>
-          <h3 className="drink-title font-light text-[var(--cream-main)] leading-tight">
+          <h3 className="drink-title font-normal text-[var(--theme-title)] leading-tight">
             {drink.name}
           </h3>
           <p
@@ -78,6 +78,34 @@ export default function DrinkCard({ drink, isActive }: Props) {
           </div>
         )}
       </div>
+      {drink.specification && (
+        <div className="grid grid-cols-2 gap-3 mt-2 pointer-events-none">
+          {drink.specification.map((item, index) => (
+            <div
+              key={index}
+              className="grid grid-rows-2 items-center justify-center gap-0 bg-[var(--cream-main)] pt-2 rounded-xl"
+            >
+              <div
+                style={{
+                  maskImage: `url(${item.specificationIcon})`,
+                  WebkitMaskImage: `url(${item.specificationIcon})`,
+                  maskRepeat: 'no-repeat',
+                  WebkitMaskRepeat: 'no-repeat',
+                  maskPosition: 'center',
+                  WebkitMaskPosition: 'center',
+                  maskSize: 'contain',
+                  WebkitMaskSize: 'contain',
+                  backgroundColor: 'var(--theme-accent)',
+                }}
+                className="w-8 h-8 inline-block shrink-0 mx-auto"
+              />
+              <span className="text-base font-semibold" style={{ color: 'var(--theme-accent)' }}>
+                {item.specificationText}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

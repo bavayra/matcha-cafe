@@ -6,12 +6,25 @@ import jasmineImg from '../../images/drinks/jasmine.webp'
 import strawberryImg from '../../images/drinks/strawberry.webp'
 import coconutImg from '../../images/drinks/coconut.webp'
 
+import berryIcon from '../../images/icons/berryIcon.svg'
+import coldIcon from '../../images/icons/coldIcon.svg'
+import creamIcon from '../../images/icons/creamIcon.svg'
+import hotIcon from '../../images/icons/hotIcon.svg'
+import milkIcon from '../../images/icons/milkIcon.svg'
+import sweetIcon from '../../images/icons/sweetIcon.svg'
+import teaIcon from '../../images/icons/teaIcon.svg'
+import flowerIcon from '../../images/icons/flowerIcon.svg'
+
 export interface DrinkTheme {
   sectionBg: string
   cardBg: string
   accent: string
   accentHover: string
   titleText: string
+  specification?: {
+    specificationIcon: string
+    specificationText: string
+  }[]
 }
 
 export const drinkThemes: Record<string, DrinkTheme> = {
@@ -60,6 +73,24 @@ export const drinks: Drink[] = [
     price: 1500,
     description: 'Традиционный матча-латте с глубокими нотками умами',
     image: classicImg,
+    specification: [
+      {
+        specificationIcon: hotIcon,
+        specificationText: 'Горячий',
+      },
+      {
+        specificationIcon: coldIcon,
+        specificationText: 'Холодный',
+      },
+      {
+        specificationIcon: milkIcon,
+        specificationText: 'Молочный',
+      },
+      {
+        specificationIcon: creamIcon,
+        specificationText: 'Сливочный',
+      },
+    ],
   },
   {
     id: 2,
@@ -68,6 +99,24 @@ export const drinks: Drink[] = [
     price: 1700,
     description: 'Матча с пюре из свежей черники — цвет и вкус лета',
     image: blueberryImg,
+    specification: [
+      {
+        specificationIcon: hotIcon,
+        specificationText: 'Горячий',
+      },
+      {
+        specificationIcon: coldIcon,
+        specificationText: 'Холодный',
+      },
+      {
+        specificationIcon: berryIcon,
+        specificationText: 'Ягодный',
+      },
+      {
+        specificationIcon: sweetIcon,
+        specificationText: 'Сладкий',
+      },
+    ],
   },
   {
     id: 3,
@@ -76,6 +125,24 @@ export const drinks: Drink[] = [
     price: 1850,
     description: 'Деликатный букет с цветочными нотами жасмина — нежно и ароматно',
     image: jasmineImg,
+    specification: [
+      {
+        specificationIcon: coldIcon,
+        specificationText: 'Холодный',
+      },
+      {
+        specificationIcon: teaIcon,
+        specificationText: 'Чайный',
+      },
+      {
+        specificationIcon: flowerIcon,
+        specificationText: 'Цветочный',
+      },
+      {
+        specificationIcon: creamIcon,
+        specificationText: 'Сливочный',
+      },
+    ],
   },
   {
     id: 4,
@@ -84,6 +151,24 @@ export const drinks: Drink[] = [
     price: 1850,
     description: 'Яркая матча со свежей клубникой — сладкая, свежая, летняя',
     image: strawberryImg,
+    specification: [
+      {
+        specificationIcon: hotIcon,
+        specificationText: 'Горячий',
+      },
+      {
+        specificationIcon: coldIcon,
+        specificationText: 'Холодный',
+      },
+      {
+        specificationIcon: berryIcon,
+        specificationText: 'Ягодный',
+      },
+      {
+        specificationIcon: sweetIcon,
+        specificationText: 'Сладкий',
+      },
+    ],
   },
   {
     id: 5,
@@ -92,5 +177,23 @@ export const drinks: Drink[] = [
     price: 2000,
     description: 'Экзотическая матча с ароматом кокоса — сладкая и освежающая',
     image: coconutImg,
+    specification: [
+      {
+        specificationIcon: hotIcon,
+        specificationText: 'Горячий',
+      },
+      {
+        specificationIcon: coldIcon,
+        specificationText: 'Холодный',
+      },
+      {
+        specificationIcon: milkIcon,
+        specificationText: 'Молочный',
+      },
+      {
+        specificationIcon: sweetIcon,
+        specificationText: 'Сладкий',
+      },
+    ],
   },
 ]
