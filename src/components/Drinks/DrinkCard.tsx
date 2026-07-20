@@ -11,18 +11,23 @@ export default function DrinkCard({ drink, isActive }: Props) {
 
   return (
     <div
-      className={`rounded-3xl overflow-hidden drop-shadow-md flex flex-col transition-shadow duration-300 ${
+      className={`rounded-xl overflow-hidden drop-shadow-md p-6 flex flex-col transition-shadow duration-300 ${
         isActive ? 'shadow-black/80' : 'shadow-black/10'
       }`}
       style={{ background: 'var(--theme-card-bg)' }}
     >
-      <div className="aspect-square w-full overflow-hidden">
-        <img
-          src={drink.image}
-          alt={drink.name}
-          className="w-full h-full object-cover"
-          draggable={false}
-        />
+      <div className="aspect-square relative w-full overflow-hidden">
+        <div>
+          <img
+            src={drink.image}
+            alt={drink.name}
+            className="w-full h-full object-cover rounded-xl"
+            draggable={false}
+          />
+          <p className="text-[var(--cream-main)] bg-[var(--theme-card-bg)] absolute top-0 right-0 px-3 py-1 rounded-bl-xl font-light drink-details tracking-wider">
+            {drink.price} ₸
+          </p>
+        </div>
       </div>
 
       <div className="p-4 2xl:p-6 flex flex-col gap-3">
@@ -30,9 +35,6 @@ export default function DrinkCard({ drink, isActive }: Props) {
           <h3 className="drink-title font-light text-[var(--cream-main)] leading-tight">
             {drink.name}
           </h3>
-          <p className="text-[var(--cream-main)] font-light drink-details tracking-wider mt-0.5">
-            {drink.price} ₸
-          </p>
 
           <p
             id="drink-description"
