@@ -16,7 +16,7 @@ export default function Nav() {
           id="logo"
           href="#hero"
           className={`logo font-bold tracking-tight hover-transition hover:text-[var(--green-main)] ${
-            isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--green-main)]'
+            isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--cream-main)]'
           }`}
         >
           SULU
@@ -27,7 +27,7 @@ export default function Nav() {
               <a
                 href={item.href}
                 className={`text-lg font-medium 2xl:text-2xl hover-transition hover:text-[var(--green-main)] ${
-                  isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--green-main)]'
+                  isScrolled ? 'text-[var(--yellow-main)]' : 'text-[var(--cream-main)]'
                 }`}
               >
                 {item.label}

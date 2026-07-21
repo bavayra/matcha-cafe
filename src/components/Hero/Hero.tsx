@@ -4,11 +4,19 @@ export default function Hero() {
       id="hero"
       className="relative h-svh min-h-[580px] flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 overflow-hidden"
       style={{
-        backgroundColor: 'color-mix(in srgb, var(--color-classic-section-bg) 50%, transparent)',
+        backgroundColor: 'color-mix(in srgb, var(--color-classic-section-bg) 60%, transparent)',
       }}
     >
       <div className="lg:grid lg:grid-cols-2 lg:gap-24 lg:justify-between lg:max-w-7xl lg:mx-auto">
-        <div className="bg-img-right absolute inset-0 bg-[url('/images/drinks/matcha-hero.webp')] bg-no-repeat opacity-60 hover-transition bg-center hero-img-size lg:mt-10 lg:bg-right lg:mr-16" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hidden lg:block absolute inset-0 w-full h-full object-cover pointer-events-none opacity-90"
+        >
+          <source src="images/drinks/matcha-vid.mp4" type="video/mp4" />
+        </video>
 
         <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start justify-center text-center md:text-left w-full max-w-7xl pt-16 md:pt-0">
           <div className="flex flex-col 2xl:mr-10 items-center max-w-xl h1-margin">
