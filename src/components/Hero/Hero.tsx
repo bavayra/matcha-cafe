@@ -1,23 +1,12 @@
-import GlowBackground from '@/components/GlowBackground'
-
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-svh min-h-[580px] flex flex-col justify-center bg-gradient-to-b from-[var(--yellow-main)] to-[var(--green-main)] px-6 md:px-12 lg:px-20 overflow-hidden"
+      className="relative h-svh min-h-[580px] flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 overflow-hidden"
+      style={{
+        backgroundColor: 'color-mix(in srgb, var(--color-classic-section-bg) 50%, transparent)',
+      }}
     >
-      <GlowBackground
-        color="bg-[var(--yellow-main)]"
-        position="top-[15%] left-[-10%]"
-        size="h-[450px] w-[450px]"
-        blur="blur-[120px]"
-      />
-      <GlowBackground
-        color="bg-[var(--yellow-main)]"
-        position="bottom-[-20%] right-[20%]"
-        size="h-[550px] w-[550px]"
-        blur="blur-[200px]"
-      />
       <div className="lg:grid lg:grid-cols-2 lg:gap-24 lg:justify-between lg:max-w-7xl lg:mx-auto">
         <div className="bg-img-right absolute inset-0 bg-[url('/images/drinks/matcha-hero.webp')] bg-no-repeat opacity-60 hover-transition bg-center hero-img-size lg:mt-10 lg:bg-right lg:mr-16" />
 

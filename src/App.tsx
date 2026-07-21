@@ -8,11 +8,14 @@ import Footer from './components/Footer/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <Nav />
       <main>
-        <Hero />
-        <Drinks />
+        <div className="relative">
+          <div className="absolute inset-0 bg-[url('/images/photos/leaves-pattern.webp')] bg-no-repeat opacity-60 bg-center bg-cover -z-10" />
+          <Hero />
+          <Drinks />
+        </div>
         <History />
         <About />
         <Contacts />

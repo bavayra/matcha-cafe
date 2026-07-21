@@ -9,7 +9,7 @@ export default function Drinks() {
   return (
     <section
       id="drinks"
-      className="py-16 overflow-hidden"
+      className="py-16 overflow-hidden relative"
       style={
         {
           '--theme-section-bg': theme.sectionBg,
