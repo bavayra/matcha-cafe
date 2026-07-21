@@ -1,7 +1,9 @@
 import foundersImg from '../../../images/photos/founders.webp'
 import matchaSpotImg from '../../../images/photos/matcha-spot.webp'
 import halalImg from '../../../images/photos/halal-logo.webp'
+
 import ScrollAnimateImage from '../ScrollAnimateImage'
+import GlowBackground from '../GlowBackground'
 
 const blocks = [
   {
@@ -28,7 +30,14 @@ const blocks = [
 
 export default function About() {
   return (
-    <section id="about" className="py-16 bg-[var(--cream-main)]">
+    <section id="about" className="relative py-16 bg-[var(--cream-main)]">
+      <GlowBackground
+        color="bg-[var(--green-main)]"
+        position="top-0 left-[-20%]"
+        size="h-[550px] w-[550px]"
+        blur="blur-[150px]"
+        opacity="0.3"
+      />
       <div className="section-width mx-auto lg:gap-y-16 px-6 flex flex-col gap-8 text-[var(--green-text)]">
         <h2 className="section-title text-[var(--green-main)]">МЫ</h2>
 
@@ -38,13 +47,22 @@ export default function About() {
             <h3 className="hidden">{blocks[0].title}</h3>
             <p className="typography-body">{blocks[0].text}</p>
           </div>
-          <ScrollAnimateImage
-            id="founders-img"
-            src={foundersImg}
-            alt="Основатели Sulu"
-            direction="right"
-            className="founders-img "
-          />
+          <div className="relative w-full max-w-xl mx-auto">
+            <GlowBackground
+              color="bg-[var(--yellow-main)]"
+              position="top-[50%] left-[-20%]"
+              size="h-[350px] w-[350px]"
+              blur="blur-[150px]"
+              opacity="0.3"
+            />
+            <ScrollAnimateImage
+              id="founders-img"
+              src={foundersImg}
+              alt="Основатели Sulu"
+              direction="right"
+              className="founders-img "
+            />
+          </div>
         </div>
 
         {/* Block 2 */}
@@ -52,13 +70,22 @@ export default function About() {
           <h3 className="h3-title">{blocks[1].title}</h3>
           <p className="typography-body">{blocks[1].text}</p>
         </div>
-        <ScrollAnimateImage
-          id="matcha-spot-img"
-          src={matchaSpotImg}
-          alt="Интерьер кафе Sulu"
-          direction="left"
-          className="md:max-w-[60vw] mx-auto 2xl:my-10"
-        />
+        <div className="relative w-full max-w-xl mx-auto">
+          <GlowBackground
+            color="bg-[var(--green-main)]"
+            position="top-0 left-[-20%]"
+            size="h-[350px] w-[350px]"
+            blur="blur-[150px]"
+            opacity="0.3"
+          />
+          <ScrollAnimateImage
+            id="matcha-spot-img"
+            src={matchaSpotImg}
+            alt="Интерьер кафе Sulu"
+            direction="left"
+            className="md:max-w-[60vw] mx-auto 2xl:my-10"
+          />
+        </div>
 
         {/* Block 3 */}
         <div className="grid grid-cols-1 gap-y-16 2xl:grid-cols-2 about-text-gap-x">

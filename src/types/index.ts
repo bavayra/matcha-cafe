@@ -3,7 +3,6 @@ export interface Drink {
   slug: string
   name: string
   price: number
-  description: string
   image: string
   specification?: {
     specificationIcon: string
