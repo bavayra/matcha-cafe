@@ -11,7 +11,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
 
   return (
     <div
-      className={`rounded-xl overflow-hidden drop-shadow-md p-6 2xl:px-4 flex 2xl:gap-y-4 flex-col transition-shadow duration-300 ${
+      className={`rounded-xl overflow-hidden drop-shadow-xl p-6 2xl:px-4 flex 2xl:gap-y-4 flex-col transition-shadow duration-300 ${
         isActive ? 'shadow-black/80' : 'shadow-black/10'
       }`}
       style={{ background: 'var(--theme-card-bg)' }}
@@ -58,7 +58,7 @@ export default function DrinkCard({ drink, isActive }: Props) {
             </div>
 
             <button
-              className="flex flex-col items-center justify-center w-full py-2  text-cream-50 font-light rounded-2xl hover:bg-matcha-500 2xl:text-xl active:scale-95 active:bg-matcha-700 transition-all cta-font-size px-1"
+              className="flex flex-col items-center justify-center w-full py-2  text-[var(--cream-main)] font-light rounded-2xl hover:bg-matcha-500 2xl:text-xl active:scale-95 active:bg-[var(--theme-section-bg)] transition-all buy-font-size px-1"
               style={{ background: 'var(--theme-accent)' }}
             >
               <div className="flex gap-1">

@@ -14,10 +14,10 @@ export default function Drinks() {
         {
           '--theme-section-bg': theme.sectionBg,
           '--theme-card-bg': theme.cardBg,
-          '--theme-accent': theme.accent,
+          '--theme-accent': theme.sectionBg,
           '--theme-accent-hover': theme.accentHover,
           '--theme-title': theme.titleText,
-          backgroundColor: 'color-mix(in srgb, var(--theme-card-bg) 70%, transparent)',
+          backgroundColor: 'color-mix(in srgb, var(--theme-section-bg) 70%, transparent)',
           transition: 'background-color 0.4s',
         } as React.CSSProperties
       }

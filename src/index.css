@@ -58,38 +58,38 @@
   /* Matcha colors */
 
   /*Classic*/
-  --color-classic-section-bg: #8ba888;
-  --color-classic-bg: #8ba888;
+  --color-classic-section-bg: #0f3b26;
+  --color-classic-bg: #3f775c;
   --color-classic-accent: #4a7c59;
-  --color-classic-title: #2f533a;
+  --color-classic-title: #e3ef26;
   --color-classic-hover: #3a6347;
 
   /*Blueberry*/
-  --color-blueberry-section-bg: #908b97;
+  --color-blueberry-section-bg: #392653;
   --color-blueberry-bg: #908b97;
   --color-blueberry-accent: #6b52a8;
-  --color-blueberry-title: #423268;
+  --color-blueberry-title: #f5f5dc;
   --color-blueberry-hover: #6b52a8;
 
   /*Jasmine*/
-  --color-jasmine-section-bg: #9c8b4f;
+  --color-jasmine-section-bg: #5d532e;
   --color-jasmine-bg: #9c8b4f;
   --color-jasmine-accent: #b89c3a;
   --color-jasmine-title: #ebdda8;
   --color-jasmine-hover: #9e8530;
 
   /*Strawberry*/
-  --color-strawberry-section-bg: #dfb9b9;
+  --color-strawberry-section-bg: #793636;
   --color-strawberry-bg: #dfb9b9;
   --color-strawberry-accent: #c25c5c;
   --color-strawberry-title: #a14949;
   --color-strawberry-hover: #a84848;
 
   /*Coconut*/
-  --color-coconut-section-bg: #d9ccae;
+  --color-coconut-section-bg: #51381f;
   --color-coconut-bg: #d9ccae;
   --color-coconut-accent: #c2a25c;
-  --color-coconut-title: #69552e;
+  --color-coconut-title: #846e41;
   --color-coconut-hover: #a88f48;
 }
 
@@ -183,6 +183,9 @@
     }
     .drink-details {
       font-size: 1.25rem;
+    }
+    .buy-font-size {
+      font-size: 1rem;
     }
     .cta-font-size {
       font-size: 1.2rem;
@@ -342,6 +345,9 @@
   :root {
     .about-text-gap-x {
       column-gap: 6rem;
+    }
+    .buy-font-size {
+      font-size: 1.25rem;
     }
     #contacts a {
       font-size: 1.75rem;
