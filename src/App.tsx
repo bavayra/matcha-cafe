@@ -1,6 +1,7 @@
 import Nav from './components/Nav/Nav'
 import Hero from './components/Hero/Hero'
 import Drinks from './components/Drinks/Drinks'
+import PhotoBlock from './components/PhotoBlock'
 import History from './components/History/History'
 import About from './components/About/About'
 import Contacts from './components/Contacts/Contacts'
@@ -19,8 +20,10 @@ function App() {
           <Hero />
           <Drinks />
         </div>
+        <PhotoBlock />
         <History />
         <About />
+
         <Contacts />
       </main>
       <Footer />
