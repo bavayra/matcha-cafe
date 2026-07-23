@@ -12,7 +12,10 @@ function App() {
       <Nav />
       <main>
         <div className="relative">
-          <div className="absolute inset-0 bg-[url('/images/photos/leaves-pattern.webp')] bg-no-repeat opacity-60 bg-center bg-cover -z-10" />
+          <div
+            className="absolute inset-0 bg-[url('/images/photos/leaves-pattern.webp')] bg-no-repeat opacity-60 bg-center bg-cover
+           -z-10"
+          />
           <Hero />
           <Drinks />
         </div>

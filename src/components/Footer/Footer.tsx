@@ -4,7 +4,7 @@ const year = new Date().getFullYear()
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--green-main)] border-t border-[var(--green-main)] px-6 py-14 text-[var(--cream-main)]">
+    <footer className=" inset-0 bg-[url('/images/photos/leaves-pattern.webp')] bg-no-repeat opacity-60 bg-center bg-cover  border-t border-[var(--green-main)] px-6 py-14 text-[var(--cream-main)]">
       <div className="section-width mx-auto flex flex-col gap-8 items-start lg:items-stretch">
         {/* Text block 1 — brand */}
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-20">

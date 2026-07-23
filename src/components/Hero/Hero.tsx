@@ -2,21 +2,21 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-svh min-h-[580px] flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 overflow-hidden"
+      className="relative h-svh min-h-[580px] flex flex-col justify-center px-6 md:px-12 lg:px-20 z-10 overflow-hidden border-b-4 border-[var(--cream-main)]"
       style={{
         backgroundColor: 'color-mix(in srgb, var(--color-classic-section-bg) 60%, transparent)',
       }}
     >
-      <div className="lg:grid lg:grid-cols-2 lg:gap-24 lg:justify-between lg:max-w-7xl lg:mx-auto">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-24 lg:max-w-7xl lg:mx-auto">
+        {/*
         <video
           autoPlay
-          loop
           muted
           playsInline
-          className="hidden lg:block absolute inset-0 w-full h-full object-cover pointer-events-none opacity-90"
+          className="hidden lg:flex absolute top-0 right-0 max-w-[30vw] h-auto object-contain pointer-events-none opacity-90"
         >
           <source src="images/drinks/matcha-vid.mp4" type="video/mp4" />
-        </video>
+        </video> */}
 
         <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start justify-center text-center md:text-left w-full max-w-7xl pt-16 md:pt-0">
           <div className="flex flex-col 2xl:mr-10 items-center max-w-xl h1-margin">
