@@ -49,7 +49,7 @@
 /*Colors*/
 :root {
   --yellow-main: #e3ef26;
-  --green-main: #8ba888;
+  --green-main: #0f3b26;
   --cream-main: #f5f5dc;
 
   --yellow-text: #bdca7a;
@@ -161,11 +161,11 @@
       width: 2.25rem;
       height: 0.2rem;
     }
+    .h1-font-size {
+      font-size: 7.5rem;
+    }
     .hover-transition {
       transition: all 0.3s ease-in-out;
-    }
-    .hero-img-size {
-      background-size: clamp(306px, calc(136px + 47.4vw), 500px) auto;
     }
     .section-title {
       font-size: 2.5rem;
@@ -185,7 +185,7 @@
       font-size: 1.25rem;
     }
     .cta-font-size {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
     .body-font-size {
       font-size: 1.125rem;
@@ -300,18 +300,13 @@
   }
 }
 
-@media (min-width: 768px) {
-  :root {
-    .hero-img-size {
-      background-size: 65vw auto;
-    }
-  }
-}
-
 @media (min-width: 1024px) {
   :root {
-    .hero-img-size {
-      background-size: 35vw auto;
+    .h1-font-size {
+      font-size: 12rem;
+    }
+    .cta-font-size {
+      font-size: 1.7rem;
     }
     .section-title {
       font-size: 5rem;
@@ -327,9 +322,6 @@
 
 @media (min-width: 1280px) {
   :root {
-    .hero-img-size {
-      background-size: 28vw auto;
-    }
     .history-carousel-img {
       width: 24vw;
     }
@@ -363,6 +355,9 @@
 
 @media (min-width: 1920px) {
   :root {
+    .h1-font-size {
+      font-size: 20rem;
+    }
     .history-carousel-img {
       width: 16vw;
     }
@@ -376,9 +371,6 @@
   :root {
     .bg-img-right {
       margin-right: 30rem;
-    }
-    .h1-margin {
-      margin-right: 10rem;
     }
     nav ul li a {
       font-size: 2rem;
